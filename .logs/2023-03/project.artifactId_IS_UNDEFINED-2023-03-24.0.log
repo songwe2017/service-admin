@@ -1,0 +1,437 @@
+2023-03-24 09:59:28,551 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 25496 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 09:59:28,553 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 09:59:29,236 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 09:59:29,240 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 09:59:29,268 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces. 
+2023-03-24 09:59:29,553 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6dce59e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 09:59:29,557 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 09:59:29,747 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-03-24 09:59:29,754 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-03-24 09:59:29,755 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-03-24 09:59:29,755 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-03-24 09:59:29,819 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-03-24 09:59:29,820 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1235 ms 
+2023-03-24 09:59:30,193 [main][] INFO  m.s.s.r.s.i.StandaloneConfigImpl 初始化[单机部署]方式Config,redisAddress:127.0.0.1:6379 
+2023-03-24 09:59:30,291 [main][] INFO  o.r.Version Redisson 3.5.4 
+2023-03-24 09:59:30,826 [redisson-netty-4-27][] INFO  o.r.c.p.MasterPubSubConnectionPool 1 connections initialized for /127.0.0.1:6379 
+2023-03-24 09:59:30,826 [redisson-netty-4-28][] INFO  o.r.c.p.MasterConnectionPool 10 connections initialized for /127.0.0.1:6379 
+2023-03-24 09:59:30,830 [main][] INFO  m.s.s.r.c.RedisConfig [RedisManager]装配完成，当前连接方式:standalone,连接地址:127.0.0.1:6379 
+2023-03-24 09:59:31,618 [main][] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Maven/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Maven/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+me.song.sys.system.controller.UserController#testLock()
+to {GET [/system/user/testLock]}: There is already 'userController' bean method
+me.song.sys.system.controller.UserController#business() mapped. 
+2023-03-24 09:59:31,618 [main][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
+2023-03-24 09:59:31,630 [main][] INFO  o.a.c.c.StandardService Stopping service [Tomcat] 
+2023-03-24 09:59:31,644 [main][] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-03-24 09:59:31,660 [main][] ERROR o.s.b.SpringApplication Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/D:/Maven/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Maven/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+me.song.sys.system.controller.UserController#testLock()
+to {GET [/system/user/testLock]}: There is already 'userController' bean method
+me.song.sys.system.controller.UserController#business() mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at me.song.sys.SYSApplication.main(SYSApplication.java:13)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/D:/Maven/repository/io/springfox/springfox-spring-web/2.7.0/springfox-spring-web-2.7.0.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+me.song.sys.system.controller.UserController#testLock()
+to {GET [/system/user/testLock]}: There is already 'userController' bean method
+me.song.sys.system.controller.UserController#business() mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1356)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 20 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+me.song.sys.system.controller.UserController#testLock()
+to {GET [/system/user/testLock]}: There is already 'userController' bean method
+me.song.sys.system.controller.UserController#business() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1585)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1549)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1438)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1325)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 37 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
+me.song.sys.system.controller.UserController#testLock()
+to {GET [/system/user/testLock]}: There is already 'userController' bean method
+me.song.sys.system.controller.UserController#business() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784)
+	... 51 common frames omitted
+2023-03-24 09:59:38,705 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 11968 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 09:59:38,709 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 09:59:39,246 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 09:59:39,247 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 09:59:39,272 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces. 
+2023-03-24 09:59:39,539 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b0c3951' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 09:59:39,543 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 09:59:39,707 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-03-24 09:59:39,712 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-03-24 09:59:39,713 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-03-24 09:59:39,713 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-03-24 09:59:39,770 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-03-24 09:59:39,770 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1031 ms 
+2023-03-24 09:59:40,043 [main][] INFO  m.s.s.r.s.i.StandaloneConfigImpl 初始化[单机部署]方式Config,redisAddress:127.0.0.1:6379 
+2023-03-24 09:59:40,104 [main][] INFO  o.r.Version Redisson 3.5.4 
+2023-03-24 09:59:40,587 [redisson-netty-4-2][] INFO  o.r.c.p.MasterConnectionPool 10 connections initialized for /127.0.0.1:6379 
+2023-03-24 09:59:40,587 [redisson-netty-4-24][] INFO  o.r.c.p.MasterPubSubConnectionPool 1 connections initialized for /127.0.0.1:6379 
+2023-03-24 09:59:40,590 [main][] INFO  m.s.s.r.c.RedisConfig [RedisManager]装配完成，当前连接方式:standalone,连接地址:127.0.0.1:6379 
+2023-03-24 09:59:41,517 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-03-24 09:59:41,609 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-03-24 09:59:41,869 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-03-24 09:59:41,869 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-03-24 09:59:41,869 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-03-24 09:59:41,869 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-03-24 09:59:41,869 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-03-24 09:59:41,890 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a5d23c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@353422fd, org.springframework.security.web.header.HeaderWriterFilter@1260c85e, org.springframework.web.filter.CorsFilter@795131d6, org.springframework.security.web.authentication.logout.LogoutFilter@6d0a4a22, me.song.sys.security.filter.LoginAuthenticationFilter@7d7a8d23, me.song.sys.security.filter.TokenFilter@3acc65f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@331ad6eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c271988, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59ec5a0b, org.springframework.security.web.session.SessionManagementFilter@25e8a111, org.springframework.security.web.access.ExceptionTranslationFilter@1abbc1d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1842dc39]
+2023-03-24 09:59:41,925 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-03-24 09:59:41,933 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-03-24 09:59:41,934 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-03-24 09:59:41,946 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-03-24 09:59:41,969 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-03-24 09:59:42,021 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-03-24 09:59:42,062 [main][] INFO  m.s.s.SYSApplication Started SYSApplication in 3.585 seconds (JVM running for 4.191) 
+2023-03-24 10:00:55,124 [http-nio-8082-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-03-24 10:00:55,125 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2023-03-24 10:00:55,126 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2023-03-24 10:00:55,442 [http-nio-8082-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2023-03-24 10:00:56,651 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (username = ?) 
+2023-03-24 10:00:56,677 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: admin(String) 
+2023-03-24 10:00:56,704 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList <==      Total: 1 
+2023-03-24 10:01:53,060 [pool-4-thread-1][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (phone = ?) 
+2023-03-24 10:01:53,061 [pool-4-thread-1][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: 138(String) 
+2023-03-24 10:01:53,065 [pool-4-thread-1][] DEBUG m.s.s.s.m.U.selectList <==      Total: 1 
+2023-03-24 10:03:33,323 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-03-24 10:03:33,324 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closing ... 
+2023-03-24 10:03:33,326 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closed 
+2023-03-24 10:03:44,267 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 24012 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 10:03:44,269 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 10:03:44,817 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 10:03:44,819 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 10:03:44,848 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces. 
+2023-03-24 10:03:45,098 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2f20f7ad' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 10:03:45,102 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 10:03:45,247 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-03-24 10:03:45,252 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-03-24 10:03:45,253 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-03-24 10:03:45,253 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-03-24 10:03:45,305 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-03-24 10:03:45,306 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1008 ms 
+2023-03-24 10:03:45,590 [main][] INFO  m.s.s.r.s.i.StandaloneConfigImpl 初始化[单机部署]方式Config,redisAddress:127.0.0.1:6379 
+2023-03-24 10:03:45,657 [main][] INFO  o.r.Version Redisson 3.5.4 
+2023-03-24 10:03:46,100 [redisson-netty-4-28][] INFO  o.r.c.p.MasterConnectionPool 10 connections initialized for /127.0.0.1:6379 
+2023-03-24 10:03:46,100 [redisson-netty-4-24][] INFO  o.r.c.p.MasterPubSubConnectionPool 1 connections initialized for /127.0.0.1:6379 
+2023-03-24 10:03:46,104 [main][] INFO  m.s.s.r.c.RedisConfig [RedisManager]装配完成，当前连接方式:standalone,连接地址:127.0.0.1:6379 
+2023-03-24 10:03:46,900 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-03-24 10:03:46,973 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-03-24 10:03:47,182 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-03-24 10:03:47,182 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-03-24 10:03:47,182 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-03-24 10:03:47,182 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-03-24 10:03:47,182 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-03-24 10:03:47,202 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d7a8d23, org.springframework.security.web.context.SecurityContextPersistenceFilter@799cf32d, org.springframework.security.web.header.HeaderWriterFilter@47666b39, org.springframework.web.filter.CorsFilter@3acc65f0, org.springframework.security.web.authentication.logout.LogoutFilter@b1fa523, me.song.sys.security.filter.LoginAuthenticationFilter@59ec5a0b, me.song.sys.security.filter.TokenFilter@29431f61, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@21579b35, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@66a99584, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f98cff, org.springframework.security.web.session.SessionManagementFilter@6c8672b9, org.springframework.security.web.access.ExceptionTranslationFilter@654cb30c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@270097ce]
+2023-03-24 10:03:47,234 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-03-24 10:03:47,241 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-03-24 10:03:47,241 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-03-24 10:03:47,250 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-03-24 10:03:47,269 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-03-24 10:03:47,310 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-03-24 10:03:47,342 [main][] INFO  m.s.s.SYSApplication Started SYSApplication in 3.309 seconds (JVM running for 3.973) 
+2023-03-24 10:05:06,395 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-03-24 10:05:06,397 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
+2023-03-24 10:05:10,719 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 25744 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 10:05:10,720 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 10:05:11,252 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 10:05:11,254 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 10:05:11,289 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces. 
+2023-03-24 10:05:11,545 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@348137e8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 10:05:11,549 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 10:05:11,705 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-03-24 10:05:11,709 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-03-24 10:05:11,710 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-03-24 10:05:11,710 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-03-24 10:05:11,765 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-03-24 10:05:11,765 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1019 ms 
+2023-03-24 10:05:12,056 [main][] INFO  m.s.s.r.s.i.StandaloneConfigImpl 初始化[单机部署]方式Config,redisAddress:127.0.0.1:6379 
+2023-03-24 10:05:12,121 [main][] INFO  o.r.Version Redisson 3.5.4 
+2023-03-24 10:05:12,633 [redisson-netty-4-2][] INFO  o.r.c.p.MasterPubSubConnectionPool 1 connections initialized for /127.0.0.1:6379 
+2023-03-24 10:05:12,633 [redisson-netty-4-27][] INFO  o.r.c.p.MasterConnectionPool 10 connections initialized for /127.0.0.1:6379 
+2023-03-24 10:05:12,637 [main][] INFO  m.s.s.r.c.RedisConfig [RedisManager]装配完成，当前连接方式:standalone,连接地址:127.0.0.1:6379 
+2023-03-24 10:05:13,611 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-03-24 10:05:13,696 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-03-24 10:05:13,921 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-03-24 10:05:13,921 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-03-24 10:05:13,921 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-03-24 10:05:13,921 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-03-24 10:05:13,921 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-03-24 10:05:13,942 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@270097ce, org.springframework.security.web.context.SecurityContextPersistenceFilter@1260c85e, org.springframework.security.web.header.HeaderWriterFilter@48bab2c6, org.springframework.web.filter.CorsFilter@8b1170f, org.springframework.security.web.authentication.logout.LogoutFilter@7f5ecada, me.song.sys.security.filter.LoginAuthenticationFilter@69cb134, me.song.sys.security.filter.TokenFilter@125124ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2dbcee03, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44dcc0e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@314c6f89, org.springframework.security.web.session.SessionManagementFilter@4b20aa21, org.springframework.security.web.access.ExceptionTranslationFilter@6ac2c5a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c3b0cc8]
+2023-03-24 10:05:13,976 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-03-24 10:05:13,984 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-03-24 10:05:13,985 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-03-24 10:05:13,994 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-03-24 10:05:14,015 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-03-24 10:05:14,058 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-03-24 10:05:14,094 [main][] INFO  m.s.s.SYSApplication Started SYSApplication in 3.605 seconds (JVM running for 4.255) 
+2023-03-24 10:05:38,290 [http-nio-8082-exec-2][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-03-24 10:05:38,291 [http-nio-8082-exec-2][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2023-03-24 10:05:38,291 [http-nio-8082-exec-2][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 0 ms 
+2023-03-24 10:05:38,631 [http-nio-8082-exec-2][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2023-03-24 10:05:39,074 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (phone = ?) 
+2023-03-24 10:05:39,087 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: 138(String) 
+2023-03-24 10:05:39,100 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList <==      Total: 1 
+2023-03-24 10:05:58,547 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (phone = ?) 
+2023-03-24 10:05:58,547 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: 138(String) 
+2023-03-24 10:05:58,549 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.selectList <==      Total: 0 
+2023-03-24 10:05:58,568 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (phone = ?) 
+2023-03-24 10:05:58,568 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: 138(String) 
+2023-03-24 10:05:58,570 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.selectList <==      Total: 0 
+2023-03-24 10:05:58,577 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.insert ==>  Preparing: INSERT INTO sys_user ( username, password, phone, status, is_deleted, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2023-03-24 10:05:58,580 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.insert ==> Parameters: ⧹🆃𖽬(String), 123(String), 138(String), true(Boolean), false(Boolean), 2023-03-24 10:05:58.576(Timestamp), 2023-03-24 10:05:58.577(Timestamp) 
+2023-03-24 10:05:58,587 [http-nio-8082-exec-3][] DEBUG m.s.s.s.m.U.insert <==    Updates: 1 
+2023-03-24 10:08:17,981 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-03-24 10:08:17,987 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closing ... 
+2023-03-24 10:08:17,992 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closed 
+2023-03-24 10:08:23,526 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 26508 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 10:08:23,528 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 10:08:24,079 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 10:08:24,080 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 10:08:24,106 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces. 
+2023-03-24 10:08:24,330 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b0c3951' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 10:08:24,333 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 10:08:24,473 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-03-24 10:08:24,478 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-03-24 10:08:24,479 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-03-24 10:08:24,479 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-03-24 10:08:24,527 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-03-24 10:08:24,527 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 970 ms 
+2023-03-24 10:08:24,803 [main][] INFO  m.s.s.r.s.i.StandaloneConfigImpl 初始化[单机部署]方式Config,redisAddress:127.0.0.1:6379 
+2023-03-24 10:08:24,869 [main][] INFO  o.r.Version Redisson 3.5.4 
+2023-03-24 10:08:25,402 [redisson-netty-4-30][] INFO  o.r.c.p.MasterConnectionPool 10 connections initialized for /127.0.0.1:6379 
+2023-03-24 10:08:25,402 [redisson-netty-4-24][] INFO  o.r.c.p.MasterPubSubConnectionPool 1 connections initialized for /127.0.0.1:6379 
+2023-03-24 10:08:25,405 [main][] INFO  m.s.s.r.c.RedisConfig [RedisManager]装配完成，当前连接方式:standalone,连接地址:127.0.0.1:6379 
+2023-03-24 10:08:26,204 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-03-24 10:08:26,277 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-03-24 10:08:26,471 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-03-24 10:08:26,471 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-03-24 10:08:26,471 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-03-24 10:08:26,471 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-03-24 10:08:26,471 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-03-24 10:08:26,490 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@121dac1a, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b50f432, org.springframework.security.web.header.HeaderWriterFilter@5ff29e8b, org.springframework.web.filter.CorsFilter@6d946eee, org.springframework.security.web.authentication.logout.LogoutFilter@1e5e3147, me.song.sys.security.filter.LoginAuthenticationFilter@23dc70c1, me.song.sys.security.filter.TokenFilter@53b907d9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66589252, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1260c85e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2c3b0cc8, org.springframework.security.web.session.SessionManagementFilter@61fa3583, org.springframework.security.web.access.ExceptionTranslationFilter@7430ed93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@464d60fb]
+2023-03-24 10:08:26,520 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-03-24 10:08:26,527 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-03-24 10:08:26,528 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-03-24 10:08:26,536 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-03-24 10:08:26,557 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-03-24 10:08:26,598 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-03-24 10:08:26,629 [main][] INFO  m.s.s.SYSApplication Started SYSApplication in 3.321 seconds (JVM running for 3.927) 
+2023-03-24 10:08:42,126 [http-nio-8082-exec-2][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-03-24 10:08:42,126 [http-nio-8082-exec-2][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2023-03-24 10:08:42,128 [http-nio-8082-exec-2][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2023-03-24 10:08:42,800 [http-nio-8082-exec-2][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2023-03-24 10:08:43,746 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (phone = ?) 
+2023-03-24 10:08:43,775 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: 138(String) 
+2023-03-24 10:08:43,798 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList <==      Total: 0 
+2023-03-24 10:08:43,816 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (phone = ?) 
+2023-03-24 10:08:43,816 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: 138(String) 
+2023-03-24 10:08:43,819 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.selectList <==      Total: 0 
+2023-03-24 10:08:43,825 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.insert ==>  Preparing: INSERT INTO sys_user ( username, password, phone, status, is_deleted, gmt_create, gmt_modified ) VALUES ( ?, ?, ?, ?, ?, ?, ? ) 
+2023-03-24 10:08:43,828 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.insert ==> Parameters: QUdMC(String), 123(String), 138(String), true(Boolean), false(Boolean), 2023-03-24 10:08:43.825(Timestamp), 2023-03-24 10:08:43.825(Timestamp) 
+2023-03-24 10:08:43,833 [http-nio-8082-exec-2][] DEBUG m.s.s.s.m.U.insert <==    Updates: 1 
+2023-03-24 16:02:59,880 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-03-24 16:02:59,884 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closing ... 
+2023-03-24 16:02:59,886 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closed 
+2023-03-24 16:03:07,640 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 23648 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 16:03:07,642 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 16:03:08,274 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 16:03:08,277 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 16:03:08,301 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces. 
+2023-03-24 16:03:08,561 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7e87ef9e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 16:03:08,565 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 16:03:08,627 [main][] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/' 
+2023-03-24 16:03:08,632 [main][] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-03-24 16:03:08,646 [main][] ERROR o.s.b.SpringApplication Application run failed 
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/'
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at me.song.sys.SYSApplication.main(SYSApplication.java:13)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Initialization of bean failed; nested exception is java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:617)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getWebServerFactory(ServletWebServerApplicationContext.java:216)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:179)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 9 common frames omitted
+Caused by: java.lang.IllegalArgumentException: ContextPath must start with '/' and not end with '/'
+	at org.springframework.boot.web.servlet.server.AbstractServletWebServerFactory.checkContextPath(AbstractServletWebServerFactory.java:136)
+	at org.springframework.boot.web.servlet.server.AbstractServletWebServerFactory.setContextPath(AbstractServletWebServerFactory.java:125)
+	at org.springframework.boot.context.properties.PropertyMapper$Source.to(PropertyMapper.java:316)
+	at org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryCustomizer.customize(ServletWebServerFactoryCustomizer.java:66)
+	at org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryCustomizer.customize(ServletWebServerFactoryCustomizer.java:39)
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.lambda$postProcessBeforeInitialization$0(WebServerFactoryCustomizerBeanPostProcessor.java:72)
+	at org.springframework.boot.util.LambdaSafe$Callbacks.lambda$null$0(LambdaSafe.java:287)
+	at org.springframework.boot.util.LambdaSafe$LambdaSafeCallback.invoke(LambdaSafe.java:159)
+	at org.springframework.boot.util.LambdaSafe$Callbacks.lambda$invoke$1(LambdaSafe.java:286)
+	at java.util.ArrayList.forEach(ArrayList.java:1249)
+	at java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1080)
+	at org.springframework.boot.util.LambdaSafe$Callbacks.invoke(LambdaSafe.java:286)
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:72)
+	at org.springframework.boot.web.server.WebServerFactoryCustomizerBeanPostProcessor.postProcessBeforeInitialization(WebServerFactoryCustomizerBeanPostProcessor.java:58)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1780)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609)
+	... 17 common frames omitted
+2023-03-24 16:03:32,939 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 10344 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 16:03:32,940 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 16:03:33,471 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 16:03:33,473 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 16:03:33,498 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces. 
+2023-03-24 16:03:33,727 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@348137e8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 16:03:33,731 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 16:03:33,892 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-03-24 16:03:33,898 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-03-24 16:03:33,899 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-03-24 16:03:33,899 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-03-24 16:03:34,769 [main][] INFO  o.a.c.c.C.[.[.[/sys-services] Initializing Spring embedded WebApplicationContext 
+2023-03-24 16:03:34,770 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1801 ms 
+2023-03-24 16:03:35,070 [main][] INFO  m.s.s.r.s.i.StandaloneConfigImpl 初始化[单机部署]方式Config,redisAddress:127.0.0.1:6379 
+2023-03-24 16:03:35,146 [main][] INFO  o.r.Version Redisson 3.5.4 
+2023-03-24 16:03:35,601 [redisson-netty-4-28][] INFO  o.r.c.p.MasterConnectionPool 10 connections initialized for /127.0.0.1:6379 
+2023-03-24 16:03:35,601 [redisson-netty-4-2][] INFO  o.r.c.p.MasterPubSubConnectionPool 1 connections initialized for /127.0.0.1:6379 
+2023-03-24 16:03:35,605 [main][] INFO  m.s.s.r.c.RedisConfig [RedisManager]装配完成，当前连接方式:standalone,连接地址:127.0.0.1:6379 
+2023-03-24 16:03:36,435 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-03-24 16:03:36,504 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-03-24 16:03:36,719 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-03-24 16:03:36,720 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-03-24 16:03:36,720 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-03-24 16:03:36,720 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-03-24 16:03:36,720 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-03-24 16:03:36,738 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a5d23c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@6c8672b9, org.springframework.security.web.header.HeaderWriterFilter@212c0aff, org.springframework.web.filter.CorsFilter@795131d6, org.springframework.security.web.authentication.logout.LogoutFilter@6d0a4a22, me.song.sys.security.filter.LoginAuthenticationFilter@7d7a8d23, me.song.sys.security.filter.TokenFilter@3acc65f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3aed692d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21d15932, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@59ec5a0b, org.springframework.security.web.session.SessionManagementFilter@47666b39, org.springframework.security.web.access.ExceptionTranslationFilter@21022cbb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1842dc39]
+2023-03-24 16:03:36,769 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-03-24 16:03:36,776 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '/sys-services' 
+2023-03-24 16:03:36,776 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-03-24 16:03:36,786 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-03-24 16:03:36,806 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-03-24 16:03:36,851 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-03-24 16:03:36,887 [main][] INFO  m.s.s.SYSApplication Started SYSApplication in 4.159 seconds (JVM running for 4.816) 
+2023-03-24 16:05:20,294 [http-nio-8082-exec-1][] INFO  o.a.c.c.C.[.[.[/sys-services] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-03-24 16:05:20,295 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2023-03-24 16:05:20,297 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 2 ms 
+2023-03-24 16:05:20,804 [http-nio-8082-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2023-03-24 16:05:22,777 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (username = ?) 
+2023-03-24 16:05:22,819 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: admin(String) 
+2023-03-24 16:05:22,866 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList <==      Total: 1 
+2023-03-24 16:06:16,474 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-03-24 16:06:16,475 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closing ... 
+2023-03-24 16:06:16,478 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closed 
+2023-03-24 16:06:18,957 [main][] INFO  m.s.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on songwe with PID 21036 (D:\WorkSpace\wrokspace-spring\service-admin\service-sys\target\classes started by 13965 in D:\WorkSpace\wrokspace-spring\service-admin) 
+2023-03-24 16:06:18,959 [main][] INFO  m.s.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-03-24 16:06:19,487 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-03-24 16:06:19,489 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-03-24 16:06:19,516 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces. 
+2023-03-24 16:06:19,790 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@f238e4f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 16:06:19,793 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-03-24 16:06:19,930 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-03-24 16:06:19,935 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-03-24 16:06:19,935 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-03-24 16:06:19,935 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-03-24 16:06:19,985 [main][] INFO  o.a.c.c.C.[.[.[/sys] Initializing Spring embedded WebApplicationContext 
+2023-03-24 16:06:19,985 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1001 ms 
+2023-03-24 16:06:20,290 [main][] INFO  m.s.s.r.s.i.StandaloneConfigImpl 初始化[单机部署]方式Config,redisAddress:127.0.0.1:6379 
+2023-03-24 16:06:20,367 [main][] INFO  o.r.Version Redisson 3.5.4 
+2023-03-24 16:06:20,816 [redisson-netty-4-2][] INFO  o.r.c.p.MasterPubSubConnectionPool 1 connections initialized for /127.0.0.1:6379 
+2023-03-24 16:06:20,816 [redisson-netty-4-25][] INFO  o.r.c.p.MasterConnectionPool 10 connections initialized for /127.0.0.1:6379 
+2023-03-24 16:06:20,819 [main][] INFO  m.s.s.r.c.RedisConfig [RedisManager]装配完成，当前连接方式:standalone,连接地址:127.0.0.1:6379 
+2023-03-24 16:06:21,679 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-03-24 16:06:21,763 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-03-24 16:06:22,006 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-03-24 16:06:22,006 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-03-24 16:06:22,006 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-03-24 16:06:22,006 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-03-24 16:06:22,006 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-03-24 16:06:22,030 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56d742ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@532ea86b, org.springframework.security.web.header.HeaderWriterFilter@1ee22768, org.springframework.web.filter.CorsFilter@75784062, org.springframework.security.web.authentication.logout.LogoutFilter@5f32ab17, me.song.sys.security.filter.LoginAuthenticationFilter@5730b513, me.song.sys.security.filter.TokenFilter@73e25780, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@526fc044, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49338f3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f4cb17b, org.springframework.security.web.session.SessionManagementFilter@306bf4c3, org.springframework.security.web.access.ExceptionTranslationFilter@65259737, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f8d42d1]
+2023-03-24 16:06:22,065 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-03-24 16:06:22,072 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '/sys' 
+2023-03-24 16:06:22,072 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-03-24 16:06:22,081 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-03-24 16:06:22,099 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-03-24 16:06:22,140 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-03-24 16:06:22,175 [main][] INFO  m.s.s.SYSApplication Started SYSApplication in 3.451 seconds (JVM running for 4.06) 
+2023-03-24 16:07:10,332 [http-nio-8082-exec-1][] INFO  o.a.c.c.C.[.[.[/sys] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-03-24 16:07:10,333 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2023-03-24 16:07:10,336 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 3 ms 
+2023-03-24 16:07:10,780 [http-nio-8082-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2023-03-24 16:07:12,401 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (username = ?) 
+2023-03-24 16:07:12,440 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: admin(String) 
+2023-03-24 16:07:12,473 [http-nio-8082-exec-1][] DEBUG m.s.s.s.m.U.selectList <==      Total: 1 
+2023-03-24 16:12:02,473 [http-nio-8082-exec-4][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 290006 
+2023-03-24 16:12:02,558 [http-nio-8082-exec-4][] DEBUG m.s.s.s.m.U.selectList ==>  Preparing: SELECT id,username,password,nick_name,avatar,phone,email,status,is_deleted,gmt_create,gmt_modified FROM sys_user WHERE is_deleted=0 AND (username = ?) 
+2023-03-24 16:12:02,559 [http-nio-8082-exec-4][] DEBUG m.s.s.s.m.U.selectList ==> Parameters: admin(String) 
+2023-03-24 16:12:02,567 [http-nio-8082-exec-4][] DEBUG m.s.s.s.m.U.selectList <==      Total: 1 

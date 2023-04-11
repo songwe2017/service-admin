@@ -1,0 +1,67 @@
+2022-06-10 21:22:18,612 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 45552 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-10 21:22:18,707 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-06-10 21:22:21,017 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-06-10 21:22:21,034 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-06-10 21:22:21,035 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-10 21:22:21,035 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-10 21:22:21,161 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-10 21:22:21,162 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2383 ms 
+2022-06-10 21:22:23,730 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-10 21:22:23,864 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-10 21:22:24,250 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-06-10 21:22:24,264 [main][] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use 
+2022-06-10 21:22:24,265 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2022-06-10 21:22:24,267 [main][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
+2022-06-10 21:22:24,270 [main][] INFO  o.a.c.h.Http11NioProtocol Pausing ProtocolHandler ["http-nio-8080"] 
+2022-06-10 21:22:24,270 [main][] INFO  o.a.c.c.StandardService Stopping service [Tomcat] 
+2022-06-10 21:22:24,316 [main][] INFO  o.a.c.h.Http11NioProtocol Stopping ProtocolHandler ["http-nio-8080"] 
+2022-06-10 21:22:24,316 [main][] INFO  o.a.c.h.Http11NioProtocol Destroying ProtocolHandler ["http-nio-8080"] 
+2022-06-10 21:22:24,325 [main][] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2022-06-10 21:22:24,391 [main][] ERROR o.s.b.d.LoggingFailureAnalysisReporter 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+ 
+2022-06-10 21:23:19,499 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 12620 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-10 21:23:19,504 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-06-10 21:23:20,893 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-06-10 21:23:20,902 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-06-10 21:23:20,903 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-10 21:23:20,904 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-10 21:23:21,000 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-10 21:23:21,000 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1441 ms 
+2022-06-10 21:23:22,901 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-10 21:23:22,986 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-10 21:23:23,344 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-06-10 21:23:23,401 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-06-10 21:23:23,402 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-10 21:23:23,448 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-10 21:23:23,497 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-10 21:23:23,757 [main][] INFO  c.a.e.EduApplication Started EduApplication in 4.971 seconds (JVM running for 7.275) 
+2022-06-10 21:23:42,611 [http-nio-8080-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-10 21:23:42,611 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-10 21:23:42,613 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-06-10 21:24:08,757 [http-nio-8080-exec-6][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2022-06-10 21:24:09,107 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-10 21:24:09,152 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-10 21:24:09,216 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-10 21:24:09,221 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-10 21:24:09,221 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-10 21:24:09,224 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-10 21:24:25,069 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-10 21:24:25,073 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-10 21:24:25,074 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-10 21:24:25,075 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-10 21:24:25,076 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-10 21:24:25,078 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 

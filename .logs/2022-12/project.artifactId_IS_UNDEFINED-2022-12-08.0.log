@@ -1,0 +1,89 @@
+2022-12-08 16:10:16,747 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 10216 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-12-08 16:10:16,751 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-12-08 16:10:18,915 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-12-08 16:10:18,928 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-12-08 16:10:18,929 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-12-08 16:10:18,929 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-12-08 16:10:19,050 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-12-08 16:10:19,051 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2217 ms 
+2022-12-08 16:10:22,277 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-12-08 16:10:22,422 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-12-08 16:10:22,841 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-12-08 16:10:22,877 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-12-08 16:10:22,879 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-12-08 16:10:22,905 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-12-08 16:10:22,970 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-12-08 16:10:23,307 [main][] INFO  c.a.e.EduApplication Started EduApplication in 7.3 seconds (JVM running for 12.748) 
+2022-12-08 16:19:22,685 [http-nio-8080-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-12-08 16:19:22,685 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-12-08 16:19:22,687 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-12-08 16:19:22,739 [http-nio-8080-exec-1][] ERROR c.a.c.e.GlobalException Request method 'GET' not supported 
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:250)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:417)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:364)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:123)
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.getHandlerInternal(RequestMappingInfoHandlerMapping.java:66)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:491)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1255)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1037)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2022-12-08 22:20:26,351 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2022-12-08 22:20:26,359 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
+2022-12-08 22:20:34,321 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 50516 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-12-08 22:20:34,324 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-12-08 22:20:35,901 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-12-08 22:20:35,913 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-12-08 22:20:35,913 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-12-08 22:20:35,914 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-12-08 22:20:36,022 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-12-08 22:20:36,023 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1638 ms 
+2022-12-08 22:20:38,582 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-12-08 22:20:38,679 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-12-08 22:20:38,933 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-12-08 22:20:38,959 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-12-08 22:20:38,960 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-12-08 22:20:38,978 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-12-08 22:20:39,022 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-12-08 22:20:39,248 [main][] INFO  c.a.e.EduApplication Started EduApplication in 5.717 seconds (JVM running for 8.129) 
+2022-12-08 22:20:53,347 [http-nio-8080-exec-2][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-12-08 22:20:53,348 [http-nio-8080-exec-2][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-12-08 22:20:53,350 [http-nio-8080-exec-2][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 2 ms 

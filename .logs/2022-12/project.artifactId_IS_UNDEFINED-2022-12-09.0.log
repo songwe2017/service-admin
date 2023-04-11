@@ -1,0 +1,1350 @@
+2022-12-09 20:26:45,705 [http-nio-8080-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2022-12-09 20:26:46,108 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 20:26:46,148 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 20:26:46,216 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 20:26:46,249 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 20:26:46,250 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 20:26:46,530 [http-nio-8080-exec-1][] ERROR c.a.c.e.GlobalException Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long 
+org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:84)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForIPage(MybatisMapperMethod.java:121)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:85)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy78.selectPage(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:389)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:399)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at TeacherServiceImp$$EnhancerBySpringCGLIB$$375961dc.page(<generated>)
+	at TeacherController.page(TeacherController.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:114)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:96)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1393)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:823)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:829)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getLong(DruidPooledResultSet.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:69)
+	at com.sun.proxy.$Proxy113.getLong(Unknown Source)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:37)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:85)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyAutomaticMappings(DefaultResultSetHandler.java:561)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:403)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:355)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:329)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:302)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:195)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy110.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy109.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.result.DefaultValueFactory.unsupported(DefaultValueFactory.java:70)
+	at com.mysql.cj.result.DefaultValueFactory.createFromTimestamp(DefaultValueFactory.java:82)
+	at com.mysql.cj.protocol.a.MysqlTextValueDecoder.decodeTimestamp(MysqlTextValueDecoder.java:81)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.decodeAndCreateReturnValue(AbstractResultsetRow.java:87)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.getValueFromBytes(AbstractResultsetRow.java:241)
+	at com.mysql.cj.protocol.a.result.ByteArrayRow.getValue(ByteArrayRow.java:91)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1301)
+	... 105 common frames omitted
+2022-12-09 20:27:41,273 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 20:27:41,274 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 20:27:41,275 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 20:27:41,276 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 20:27:41,276 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 20:27:41,282 [http-nio-8080-exec-6][] ERROR c.a.c.e.GlobalException Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long 
+org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:84)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForIPage(MybatisMapperMethod.java:121)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:85)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy78.selectPage(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:389)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:399)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at TeacherServiceImp$$EnhancerBySpringCGLIB$$375961dc.page(<generated>)
+	at TeacherController.page(TeacherController.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:114)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:96)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1393)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:823)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:829)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getLong(DruidPooledResultSet.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:69)
+	at com.sun.proxy.$Proxy113.getLong(Unknown Source)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:37)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:85)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyAutomaticMappings(DefaultResultSetHandler.java:561)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:403)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:355)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:329)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:302)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:195)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy110.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy109.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.result.DefaultValueFactory.unsupported(DefaultValueFactory.java:70)
+	at com.mysql.cj.result.DefaultValueFactory.createFromTimestamp(DefaultValueFactory.java:82)
+	at com.mysql.cj.protocol.a.MysqlTextValueDecoder.decodeTimestamp(MysqlTextValueDecoder.java:81)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.decodeAndCreateReturnValue(AbstractResultsetRow.java:87)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.getValueFromBytes(AbstractResultsetRow.java:241)
+	at com.mysql.cj.protocol.a.result.ByteArrayRow.getValue(ByteArrayRow.java:91)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1301)
+	... 105 common frames omitted
+2022-12-09 20:27:44,655 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 20:27:44,656 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 20:27:44,657 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 20:27:44,658 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 20:27:44,658 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 20:27:44,662 [http-nio-8080-exec-4][] ERROR c.a.c.e.GlobalException Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long 
+org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:84)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForIPage(MybatisMapperMethod.java:121)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:85)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy78.selectPage(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:389)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:399)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at TeacherServiceImp$$EnhancerBySpringCGLIB$$375961dc.page(<generated>)
+	at TeacherController.page(TeacherController.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:114)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:96)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1393)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:823)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:829)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getLong(DruidPooledResultSet.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:69)
+	at com.sun.proxy.$Proxy113.getLong(Unknown Source)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:37)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:85)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyAutomaticMappings(DefaultResultSetHandler.java:561)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:403)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:355)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:329)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:302)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:195)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy110.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy109.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.result.DefaultValueFactory.unsupported(DefaultValueFactory.java:70)
+	at com.mysql.cj.result.DefaultValueFactory.createFromTimestamp(DefaultValueFactory.java:82)
+	at com.mysql.cj.protocol.a.MysqlTextValueDecoder.decodeTimestamp(MysqlTextValueDecoder.java:81)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.decodeAndCreateReturnValue(AbstractResultsetRow.java:87)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.getValueFromBytes(AbstractResultsetRow.java:241)
+	at com.mysql.cj.protocol.a.result.ByteArrayRow.getValue(ByteArrayRow.java:91)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1301)
+	... 105 common frames omitted
+2022-12-09 20:27:59,326 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 20:27:59,327 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 20:27:59,328 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 20:27:59,329 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 20:27:59,329 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 20:27:59,333 [http-nio-8080-exec-10][] ERROR c.a.c.e.GlobalException Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long 
+org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:84)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForIPage(MybatisMapperMethod.java:121)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:85)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy78.selectPage(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:389)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:399)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at TeacherServiceImp$$EnhancerBySpringCGLIB$$375961dc.page(<generated>)
+	at TeacherController.page(TeacherController.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:114)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:96)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1393)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:823)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:829)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getLong(DruidPooledResultSet.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:69)
+	at com.sun.proxy.$Proxy113.getLong(Unknown Source)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:37)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:85)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyAutomaticMappings(DefaultResultSetHandler.java:561)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:403)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:355)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:329)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:302)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:195)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy110.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy109.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.result.DefaultValueFactory.unsupported(DefaultValueFactory.java:70)
+	at com.mysql.cj.result.DefaultValueFactory.createFromTimestamp(DefaultValueFactory.java:82)
+	at com.mysql.cj.protocol.a.MysqlTextValueDecoder.decodeTimestamp(MysqlTextValueDecoder.java:81)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.decodeAndCreateReturnValue(AbstractResultsetRow.java:87)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.getValueFromBytes(AbstractResultsetRow.java:241)
+	at com.mysql.cj.protocol.a.result.ByteArrayRow.getValue(ByteArrayRow.java:91)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1301)
+	... 105 common frames omitted
+2022-12-09 20:28:10,815 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 20:28:10,816 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 20:28:10,817 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 20:28:10,818 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 20:28:10,818 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 20:28:10,821 [http-nio-8080-exec-7][] ERROR c.a.c.e.GlobalException Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long 
+org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'gmt_create' from result set.  Cause: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+; Unsupported conversion from TIMESTAMP to java.lang.Long; nested exception is java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:84)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:79)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy71.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForIPage(MybatisMapperMethod.java:121)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:85)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89)
+	at com.sun.proxy.$Proxy78.selectPage(Unknown Source)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:389)
+	at com.baomidou.mybatisplus.extension.service.IService.page(IService.java:399)
+	at com.baomidou.mybatisplus.extension.service.IService$$FastClassBySpringCGLIB$$f8525d18.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:687)
+	at TeacherServiceImp$$EnhancerBySpringCGLIB$$375961dc.page(<generated>)
+	at TeacherController.page(TeacherController.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.sql.SQLDataException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:114)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:96)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1393)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:823)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getLong(ResultSetImpl.java:829)
+	at com.alibaba.druid.pool.DruidPooledResultSet.getLong(DruidPooledResultSet.java:301)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.ResultSetLogger.invoke(ResultSetLogger.java:69)
+	at com.sun.proxy.$Proxy113.getLong(Unknown Source)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:37)
+	at org.apache.ibatis.type.LongTypeHandler.getNullableResult(LongTypeHandler.java:26)
+	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:85)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyAutomaticMappings(DefaultResultSetHandler.java:561)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:403)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:355)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:329)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:302)
+	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:195)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:64)
+	at com.sun.proxy.$Proxy110.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62)
+	at com.sun.proxy.$Proxy109.query(Unknown Source)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+Caused by: com.mysql.cj.exceptions.DataConversionException: Unsupported conversion from TIMESTAMP to java.lang.Long
+	at com.mysql.cj.result.DefaultValueFactory.unsupported(DefaultValueFactory.java:70)
+	at com.mysql.cj.result.DefaultValueFactory.createFromTimestamp(DefaultValueFactory.java:82)
+	at com.mysql.cj.protocol.a.MysqlTextValueDecoder.decodeTimestamp(MysqlTextValueDecoder.java:81)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.decodeAndCreateReturnValue(AbstractResultsetRow.java:87)
+	at com.mysql.cj.protocol.result.AbstractResultsetRow.getValueFromBytes(AbstractResultsetRow.java:241)
+	at com.mysql.cj.protocol.a.result.ByteArrayRow.getValue(ByteArrayRow.java:91)
+	at com.mysql.cj.jdbc.result.ResultSetImpl.getObject(ResultSetImpl.java:1301)
+	... 105 common frames omitted
+2022-12-09 20:33:41,540 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2022-12-09 20:33:41,542 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closing ... 
+2022-12-09 20:33:41,571 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-1} closed 
+2022-12-09 20:33:56,151 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 18360 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-12-09 20:33:56,153 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-12-09 20:33:58,875 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-12-09 20:33:58,885 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-12-09 20:33:58,886 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-12-09 20:33:58,886 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-12-09 20:33:58,995 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-12-09 20:33:58,995 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2735 ms 
+2022-12-09 20:34:01,417 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-12-09 20:34:01,495 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-12-09 20:34:01,713 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-12-09 20:34:01,732 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-12-09 20:34:01,733 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-12-09 20:34:01,750 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-12-09 20:34:01,787 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-12-09 20:34:01,961 [main][] INFO  c.a.e.EduApplication Started EduApplication in 6.416 seconds (JVM running for 8.593) 
+2022-12-09 20:36:32,804 [http-nio-8080-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-12-09 20:36:32,804 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-12-09 20:36:32,806 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 2 ms 
+2022-12-09 20:36:33,013 [http-nio-8080-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2022-12-09 20:36:33,214 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 20:36:33,241 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 20:36:33,263 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 20:36:33,267 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 20:36:33,268 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 20:36:33,273 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:11:25,953 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:11:25,954 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:11:25,959 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:11:25,959 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:11:25,960 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:11:25,964 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:13:33,229 [http-nio-8080-exec-6][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 127255 
+2022-12-09 22:13:33,235 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:13:33,235 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:13:33,238 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:13:33,239 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:13:33,239 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:13:33,245 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:15:54,441 [http-nio-8080-exec-10][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 141201 
+2022-12-09 22:15:54,450 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:15:54,450 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:15:54,454 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:15:54,455 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:15:54,455 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:15:54,458 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:15:58,421 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:15:58,421 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:15:58,422 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:15:58,423 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:15:58,423 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:15:58,426 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:16:27,260 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:16:27,261 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:16:27,262 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:16:27,262 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:16:27,263 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:16:27,267 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:16:29,998 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:16:29,999 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:16:30,000 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:16:30,001 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:16:30,001 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:16:30,003 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:16:56,166 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:16:56,167 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:16:56,168 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:16:56,169 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:16:56,171 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:16:56,174 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:17:49,557 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:17:49,558 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:17:49,559 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:17:49,560 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:17:49,560 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:17:49,562 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:28:25,758 [http-nio-8080-exec-7][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 636196 
+2022-12-09 22:28:25,766 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:28:25,766 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:28:25,769 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:28:25,770 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:28:25,771 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:28:25,773 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:29:29,164 [http-nio-8080-exec-10][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 63391 
+2022-12-09 22:29:29,170 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:29:29,171 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:29:29,174 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:29:29,175 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:29:29,176 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:29:29,177 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:36:19,727 [http-nio-8080-exec-4][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 410550 
+2022-12-09 22:36:19,737 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:36:19,737 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:36:19,741 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:36:19,742 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:36:19,742 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:36:19,744 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:37:04,191 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:37:04,191 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:37:04,192 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:37:04,193 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:37:04,193 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:37:04,194 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:46:41,180 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 576985 
+2022-12-09 22:46:41,187 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:46:41,188 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:46:41,191 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:46:41,192 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:46:41,192 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:46:41,194 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:46:53,000 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:46:53,001 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:46:53,002 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:46:53,003 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:46:53,003 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:46:53,005 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:49:56,125 [http-nio-8080-exec-3][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 183120 
+2022-12-09 22:49:56,130 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:49:56,131 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:49:56,133 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:49:56,134 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:49:56,135 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:49:56,137 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:52:26,741 [http-nio-8080-exec-5][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 150605 
+2022-12-09 22:52:26,790 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:52:26,790 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:52:26,794 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:52:26,795 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:52:26,796 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:52:26,799 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:57:03,634 [http-nio-8080-exec-7][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 276837 
+2022-12-09 22:57:03,641 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:57:03,641 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:57:03,645 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:57:03,646 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:57:03,646 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:57:03,648 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 22:59:11,877 [http-nio-8080-exec-9][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 128230 
+2022-12-09 22:59:11,882 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 22:59:11,883 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 22:59:11,905 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 22:59:11,906 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 22:59:11,907 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 22:59:11,908 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:00:06,027 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:00:06,027 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:00:06,028 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:00:06,029 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:00:06,030 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:00:06,032 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:00:38,401 [http-nio-8080-exec-2][] ERROR c.a.c.e.GlobalException Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined" 
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+2022-12-09 23:00:48,954 [http-nio-8080-exec-3][] ERROR c.a.c.e.GlobalException Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined" 
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+2022-12-09 23:00:59,202 [http-nio-8080-exec-4][] ERROR c.a.c.e.GlobalException Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined" 
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+2022-12-09 23:01:56,033 [http-nio-8080-exec-5][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 110000 
+2022-12-09 23:01:56,047 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:01:56,048 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:01:56,051 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:01:56,052 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:01:56,052 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:01:56,054 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:03:28,181 [http-nio-8080-exec-7][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 92128 
+2022-12-09 23:03:28,187 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:03:28,187 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:03:28,190 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:03:28,191 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:03:28,191 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:03:28,193 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:03:54,374 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:03:54,374 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:03:54,375 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:03:54,376 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:03:54,377 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:03:54,378 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:06:35,234 [http-nio-8080-exec-10][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 160856 
+2022-12-09 23:06:35,240 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:06:35,241 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:06:35,243 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:06:35,244 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:06:35,244 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:06:35,246 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:07:11,841 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:07:11,841 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:07:11,842 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:07:11,843 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:07:11,843 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:07:11,844 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:07:24,270 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:07:24,271 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:07:24,271 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:07:24,272 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:07:24,272 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:07:24,273 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:07:37,228 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:07:37,229 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:07:37,229 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:07:37,230 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:07:37,231 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:07:37,232 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:07:49,255 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:07:49,255 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:07:49,256 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:07:49,257 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:07:49,257 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:07:49,258 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:08:48,565 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:08:48,565 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:08:48,566 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:08:48,567 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:08:48,567 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:08:48,569 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:08:50,172 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:08:51,081 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:08:51,082 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:08:51,083 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:08:51,083 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:08:51,084 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:08:52,151 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:08:52,152 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:08:52,153 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:08:52,154 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:08:52,154 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:08:52,155 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:08:55,247 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:08:55,248 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:08:55,249 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:08:55,249 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:08:55,250 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:08:55,251 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:08:59,530 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:08:59,530 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:08:59,531 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:08:59,532 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:08:59,532 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:08:59,534 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:09:04,363 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:09:04,363 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:09:04,364 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:09:04,365 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:09:04,365 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:09:04,366 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:09:07,191 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:09:07,192 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:09:07,193 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:09:07,193 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:09:07,194 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:09:07,195 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:09:09,096 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:09:09,096 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:09:09,097 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:09:09,098 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:09:09,098 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:09:09,099 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:09:10,806 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:09:10,806 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:09:10,807 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:09:10,808 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:09:10,809 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:09:10,810 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:09:12,011 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:09:12,012 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:09:12,012 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:09:12,013 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:09:12,013 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:09:12,015 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:09:35,025 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:09:35,025 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:09:35,026 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:09:35,027 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:09:35,027 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:09:35,029 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:10:18,638 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:10:18,639 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:10:18,640 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:10:18,640 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:10:18,641 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:10:18,643 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:11:24,037 [http-nio-8080-exec-3][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 65396 
+2022-12-09 23:11:24,042 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:11:24,043 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:11:24,044 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:11:24,045 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:11:24,045 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:11:24,046 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:11:46,274 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:11:46,275 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:11:46,275 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:11:46,277 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:11:46,277 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:11:46,278 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:12:02,755 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:12:02,755 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:12:02,756 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:12:02,757 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:12:02,757 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:12:02,758 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:13:06,621 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 63863 
+2022-12-09 23:13:06,627 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:13:06,628 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:13:06,629 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:13:06,630 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:13:06,630 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:13:06,631 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:14:02,265 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:14:02,266 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:14:02,267 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:14:02,268 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:14:02,268 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:14:02,269 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:14:03,705 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:14:05,050 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:14:05,051 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:14:05,052 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:14:05,052 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:14:05,053 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:14:05,059 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:14:05,059 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:14:05,060 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:14:05,061 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:14:05,061 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:14:05,062 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:14:06,101 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:14:06,101 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:14:06,102 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:14:06,103 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:14:06,103 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:14:06,104 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:14:06,898 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:14:06,898 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:14:06,899 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:14:06,900 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:14:06,900 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:14:06,901 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:14:07,860 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:14:07,861 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:14:07,862 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:14:07,862 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:14:07,862 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:14:07,863 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:16:46,823 [http-nio-8080-exec-7][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 158960 
+2022-12-09 23:16:46,829 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:16:46,829 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:16:46,831 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:16:46,831 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:16:46,832 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:16:46,834 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:16:57,870 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:16:57,870 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:16:57,871 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:17:00,895 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:17:00,895 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:17:00,896 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:17:02,425 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:17:02,425 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:17:02,425 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:17:02,426 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:17:02,427 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:17:02,428 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:18:30,470 [http-nio-8080-exec-5][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 88043 
+2022-12-09 23:18:30,476 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:18:30,476 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:18:30,477 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:18:30,478 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-12-09 23:18:30,479 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-12-09 23:18:30,480 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:18:47,348 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:18:47,348 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:18:47,349 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:18:47,350 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-12-09 23:18:47,350 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 4(Long), 2(Long) 
+2022-12-09 23:18:47,352 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:18:59,587 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:18:59,587 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:18:59,588 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:18:59,589 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-12-09 23:18:59,589 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-12-09 23:18:59,590 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:19:01,565 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:19:01,565 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:19:01,566 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:19:01,567 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:19:01,567 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:19:01,568 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:19:20,022 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:19:20,022 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:19:20,023 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:19:20,023 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:19:20,024 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-12-09 23:19:20,025 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:19:41,676 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:19:41,676 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:19:41,677 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:20:20,064 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:20:20,064 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:20:20,065 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:20:20,066 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:20:20,066 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:20:20,068 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:20:23,021 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:20:23,021 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:20:23,022 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:20:23,023 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-12-09 23:20:23,023 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-12-09 23:20:23,025 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:20:26,189 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:20:26,189 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:20:26,189 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:20:26,191 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-12-09 23:20:26,191 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 4(Long), 2(Long) 
+2022-12-09 23:20:26,192 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:20:28,119 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:20:28,119 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:20:28,120 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:20:28,121 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-12-09 23:20:28,121 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-12-09 23:20:28,122 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:20:28,834 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:20:28,835 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:20:28,835 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:20:28,836 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:20:28,837 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:20:28,837 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:28:06,217 [http-nio-8080-exec-9][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 457379 
+2022-12-09 23:28:06,225 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:28:06,225 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:28:06,229 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:28:06,230 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:28:06,230 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:28:06,231 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:28:18,048 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:28:18,048 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:28:18,050 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:28:18,051 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:28:18,051 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:28:18,053 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:29:03,347 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:29:03,348 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:29:03,349 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:29:03,350 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:29:03,351 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:29:03,352 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:31:32,199 [http-nio-8080-exec-6][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 148847 
+2022-12-09 23:31:32,205 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:31:32,206 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:31:32,207 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:31:32,208 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:31:32,208 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:31:32,209 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:31:34,997 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:31:34,998 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:31:34,999 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:31:34,999 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:31:35,000 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 20(Long) 
+2022-12-09 23:31:35,001 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:31:39,927 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:31:39,927 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:31:39,928 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:31:39,929 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:31:39,929 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:31:39,930 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-12-09 23:31:44,121 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:31:44,122 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:31:44,122 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:31:44,123 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:31:44,123 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 20(Long) 
+2022-12-09 23:31:44,125 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 6 
+2022-12-09 23:32:50,093 [http-nio-8080-exec-2][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 65969 
+2022-12-09 23:32:50,100 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-12-09 23:32:50,100 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-12-09 23:32:50,102 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-12-09 23:32:50,102 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-12-09 23:32:50,103 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-12-09 23:32:50,103 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 

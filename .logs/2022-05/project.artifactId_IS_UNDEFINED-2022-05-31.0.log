@@ -1,0 +1,35 @@
+2022-05-31 22:56:00,939 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 19352 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-05-31 22:56:00,939 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-05-31 22:56:02,829 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-05-31 22:56:02,831 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-05-31 22:56:02,841 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-05-31 22:56:02,841 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-05-31 22:56:02,931 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-05-31 22:56:02,931 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1912 ms 
+2022-05-31 22:56:04,584 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-05-31 22:56:04,664 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-05-31 22:56:05,011 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-05-31 22:56:05,031 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-05-31 22:56:05,031 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-05-31 22:56:05,051 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-05-31 22:56:05,091 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-05-31 22:56:05,251 [main][] INFO  c.a.e.EduApplication Started EduApplication in 5.151 seconds (JVM running for 7.613) 
+2022-05-31 22:57:29,376 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 31544 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-05-31 22:57:29,380 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-05-31 22:57:30,743 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-05-31 22:57:30,753 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-05-31 22:57:30,763 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-05-31 22:57:30,763 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-05-31 22:57:30,863 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-05-31 22:57:30,863 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1440 ms 
+2022-05-31 22:57:32,457 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-05-31 22:57:32,527 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-05-31 22:57:32,727 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-05-31 22:57:32,747 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-05-31 22:57:32,747 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-05-31 22:57:32,757 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-05-31 22:57:32,797 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-05-31 22:57:32,987 [main][] INFO  c.a.e.EduApplication Started EduApplication in 4.209 seconds (JVM running for 6.496) 
+2022-05-31 23:43:08,811 [http-nio-8080-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-05-31 23:43:08,812 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-05-31 23:43:08,817 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 5 ms 

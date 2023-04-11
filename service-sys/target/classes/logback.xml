@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true" scanPeriod="180 seconds">>
+    <!-- 日志文件目录 -->
+    <property name="log.dir" value="${LOG_DIR:-.logs}"/>
+    <property name="log.level" value="${LOG_LEVEL:-INFO}"/>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <encoder>
+            <pattern>%magenta(%d{"yyyy-MM-dd HH:mm:ss,SSS"})[%thread][%X{traceId}] %highlight(%-5level) %cyan(%logger{15}) - %msg %n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="File" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志文件名称 -->
+        <file>${log.dir}/${project.artifactId}.log</file>
+        <!-- 日志输出格式 -->
+        <encoder>
+            <pattern>%d{"yyyy-MM-dd HH:mm:ss,SSS"} [%thread][%X{traceId}] %-5level %logger{15} %msg %n</pattern>
+        </encoder>
+        <!-- 日志收集策略，文件大小名称等 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.dir}/%d{yyyy-MM, aux}/${project.artifactId}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>32MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="org.springframework" level="${log.level}" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="File"/>
+    </logger>
+    
+    <logger name="me.song.sys.system.mapper" level="DEBUG" additivity="false">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="File"/>
+    </logger>
+
+    <root level="${log.level}">
+        <appender-ref ref="Console"/>
+        <appender-ref ref="File"/>
+    </root>
+</configuration>
+

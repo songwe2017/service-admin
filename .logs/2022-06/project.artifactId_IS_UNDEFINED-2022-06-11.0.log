@@ -1,0 +1,266 @@
+2022-06-11 18:21:02,053 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 34260 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 18:21:02,068 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 18:21:02,485 [main][] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.atguigu.aclservice.AclApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'mybatisPlusConfig' for bean class [com.atguigu.eduservice.config.MybatisPlusConfig] conflicts with existing, non-compatible bean definition of same name and class [com.atguigu.aclservice.config.MybatisPlusConfig] 
+2022-06-11 18:21:02,567 [main][] ERROR o.s.b.SpringApplication Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.atguigu.aclservice.AclApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'mybatisPlusConfig' for bean class [com.atguigu.eduservice.config.MybatisPlusConfig] conflicts with existing, non-compatible bean definition of same name and class [com.atguigu.aclservice.config.MybatisPlusConfig]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:336)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.atguigu.aclservice.AclApplication.main(AclApplication.java:15)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'mybatisPlusConfig' for bean class [com.atguigu.eduservice.config.MybatisPlusConfig] conflicts with existing, non-compatible bean definition of same name and class [com.atguigu.aclservice.config.MybatisPlusConfig]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 14 common frames omitted
+2022-06-11 18:27:54,906 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 43376 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 18:27:54,909 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 18:27:55,242 [main][] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.atguigu.aclservice.AclApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'mybatisPlusConfig' for bean class [com.atguigu.eduservice.config.MybatisPlusConfig] conflicts with existing, non-compatible bean definition of same name and class [com.atguigu.aclservice.config.MybatisPlusConfig] 
+2022-06-11 18:27:55,278 [main][] ERROR o.s.b.SpringApplication Application run failed 
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.atguigu.aclservice.AclApplication]; nested exception is org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'mybatisPlusConfig' for bean class [com.atguigu.eduservice.config.MybatisPlusConfig] conflicts with existing, non-compatible bean definition of same name and class [com.atguigu.aclservice.config.MybatisPlusConfig]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:189)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:336)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:252)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:285)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:99)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:751)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:569)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.atguigu.aclservice.AclApplication.main(AclApplication.java:15)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'mybatisPlusConfig' for bean class [com.atguigu.eduservice.config.MybatisPlusConfig] conflicts with existing, non-compatible bean definition of same name and class [com.atguigu.aclservice.config.MybatisPlusConfig]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:349)
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:287)
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:132)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:296)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:250)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:207)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:175)
+	... 14 common frames omitted
+2022-06-11 18:29:39,369 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 55836 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 18:29:39,371 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 18:29:41,675 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 18:29:41,686 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 18:29:41,687 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 18:29:41,688 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 18:29:41,805 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 18:29:41,805 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2362 ms 
+2022-06-11 18:29:41,907 [main][] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissonServiceImp': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.aclservice.mapper.PermissonMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)} 
+2022-06-11 18:29:41,910 [main][] INFO  o.a.c.c.StandardService Stopping service [Tomcat] 
+2022-06-11 18:29:41,932 [main][] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2022-06-11 18:29:41,962 [main][] ERROR o.s.b.SpringApplication Application run failed 
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'permissonServiceImp': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.aclservice.mapper.PermissonMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.atguigu.aclservice.AclApplication.main(AclApplication.java:15)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.atguigu.aclservice.mapper.PermissonMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1777)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1333)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 20 common frames omitted
+2022-06-11 18:30:49,700 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 43580 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 18:30:49,703 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 18:30:51,141 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 18:30:51,151 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 18:30:51,152 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 18:30:51,152 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 18:30:51,246 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 18:30:51,247 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1489 ms 
+2022-06-11 18:30:53,506 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-11 18:30:53,611 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 18:30:53,877 [main][] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: b77a4315-ac0a-4dec-bfff-c50d7d128124
+ 
+2022-06-11 18:30:53,986 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73894c5a, org.springframework.security.web.context.SecurityContextPersistenceFilter@34414ffc, org.springframework.security.web.header.HeaderWriterFilter@4ac8768e, org.springframework.security.web.csrf.CsrfFilter@16a5c7e4, org.springframework.security.web.authentication.logout.LogoutFilter@65ef48f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2a47597, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@72543547, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7698b7a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@576b7c74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4041739c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ea04cab, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a9ceddf, org.springframework.security.web.session.SessionManagementFilter@691500ab, org.springframework.security.web.access.ExceptionTranslationFilter@4dcbae55, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@abad89c] 
+2022-06-11 18:30:54,070 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 18:30:54,101 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 18:30:54,102 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-11 18:30:54,127 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-11 18:30:54,184 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-11 18:30:54,412 [main][] INFO  c.a.a.AclApplication Started AclApplication in 5.646 seconds (JVM running for 7.579) 
+2022-06-11 19:50:43,974 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 47800 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 19:50:43,977 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 19:50:45,096 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 19:50:45,105 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 19:50:45,106 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 19:50:45,106 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 19:50:45,215 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 19:50:45,216 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1189 ms 
+2022-06-11 19:50:47,077 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 19:50:47,302 [main][] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration 
+
+Using generated security password: 2bf5895c-36d0-4d3e-839e-a94360593d97
+ 
+2022-06-11 19:50:47,400 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b676112, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b1c538d, org.springframework.security.web.header.HeaderWriterFilter@75181b50, org.springframework.security.web.csrf.CsrfFilter@3b27b497, org.springframework.security.web.authentication.logout.LogoutFilter@37b52340, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@18578491, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2f4e40d7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5578be42, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4c2af006, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6325f352, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29a98d9f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e49ce2b, org.springframework.security.web.session.SessionManagementFilter@5f254608, org.springframework.security.web.access.ExceptionTranslationFilter@445bb139, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@765ffb14] 
+2022-06-11 19:50:47,464 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 19:50:47,485 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 19:50:47,494 [main][] INFO  c.a.a.AclApplication Started AclApplication in 4.325 seconds (JVM running for 6.237) 
+2022-06-11 19:51:19,210 [http-nio-8081-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-11 19:51:19,211 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-11 19:51:19,212 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-06-11 20:00:48,765 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 52964 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 20:00:48,767 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 20:00:49,823 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 20:00:49,832 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:00:49,832 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 20:00:49,833 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 20:00:49,926 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 20:00:49,927 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1108 ms 
+2022-06-11 20:00:51,734 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:00:52,077 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:00:52,100 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 20:00:52,110 [main][] INFO  c.a.a.AclApplication Started AclApplication in 4.129 seconds (JVM running for 6.131) 
+2022-06-11 20:01:05,117 [http-nio-8081-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-11 20:01:05,118 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-11 20:01:05,119 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-06-11 20:06:33,517 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 8104 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 20:06:33,520 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 20:06:34,696 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 20:06:34,706 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:06:34,707 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 20:06:34,707 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 20:06:34,828 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 20:06:34,829 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1216 ms 
+2022-06-11 20:06:36,678 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:06:36,974 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:06:36,994 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 20:06:37,004 [main][] INFO  c.a.a.AclApplication Started AclApplication in 4.12 seconds (JVM running for 6.564) 
+2022-06-11 20:07:20,152 [http-nio-8081-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-11 20:07:20,152 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-11 20:07:20,153 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-06-11 20:14:02,045 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 33908 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 20:14:02,048 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 20:14:03,366 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 20:14:03,376 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:14:03,377 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 20:14:03,378 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 20:14:03,476 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 20:14:03,476 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1370 ms 
+2022-06-11 20:14:05,427 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-11 20:14:05,532 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:14:05,777 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:14:05,802 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 20:14:05,803 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-11 20:14:05,819 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-11 20:14:05,860 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-11 20:14:05,882 [main][] INFO  c.a.a.AclApplication Started AclApplication in 4.609 seconds (JVM running for 6.622) 
+2022-06-11 20:14:48,323 [http-nio-8081-exec-2][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-11 20:14:48,323 [http-nio-8081-exec-2][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-11 20:14:48,326 [http-nio-8081-exec-2][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 2 ms 
+2022-06-11 20:15:55,758 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 21824 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 20:15:55,761 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 20:15:57,057 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 20:15:57,068 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:15:57,069 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 20:15:57,069 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 20:15:57,172 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 20:15:57,172 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1361 ms 
+2022-06-11 20:15:59,209 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-11 20:15:59,291 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:15:59,493 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:15:59,515 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 20:15:59,516 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-11 20:15:59,530 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-11 20:15:59,566 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-11 20:15:59,587 [main][] INFO  c.a.a.AclApplication Started AclApplication in 4.633 seconds (JVM running for 6.453) 
+2022-06-11 20:16:10,865 [http-nio-8081-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-11 20:16:10,866 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-11 20:16:10,867 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-06-11 20:18:02,342 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 34852 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 20:18:02,344 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 20:18:03,924 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 20:18:03,936 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:18:03,936 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 20:18:03,936 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 20:18:04,045 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 20:18:04,045 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1599 ms 
+2022-06-11 20:18:06,190 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-11 20:18:06,331 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:18:06,532 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:18:06,552 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 20:18:06,553 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-11 20:18:06,567 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-11 20:18:06,601 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-11 20:18:06,620 [main][] INFO  c.a.a.AclApplication Started AclApplication in 5.032 seconds (JVM running for 6.898) 
+2022-06-11 20:18:11,575 [http-nio-8081-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-11 20:18:11,575 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-11 20:18:11,576 [http-nio-8081-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-06-11 20:19:53,770 [http-nio-8081-exec-5][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2022-06-11 20:20:47,245 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 49868 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 20:20:47,250 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 20:20:48,971 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 20:20:48,984 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:20:48,985 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 20:20:48,985 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 20:20:49,187 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 20:20:49,188 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1859 ms 
+2022-06-11 20:20:51,921 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-11 20:20:52,020 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:20:52,822 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:20:52,893 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 20:20:52,894 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-11 20:20:52,930 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-11 20:20:53,053 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-11 20:20:53,158 [main][] INFO  c.a.a.AclApplication Started AclApplication in 6.645 seconds (JVM running for 9.768) 
+2022-06-11 20:24:12,393 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:24:12,395 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
+2022-06-11 20:24:19,792 [main][] INFO  c.a.a.AclApplication Starting AclApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 21700 (D:\workspace\wrokspace-spring\guli-parent\service\service-acl\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-11 20:24:19,795 [main][] INFO  c.a.a.AclApplication No active profile set, falling back to default profiles: default 
+2022-06-11 20:24:21,211 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8081 (http) 
+2022-06-11 20:24:21,220 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:24:21,221 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-11 20:24:21,221 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-11 20:24:21,312 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-11 20:24:21,312 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1344 ms 
+2022-06-11 20:24:23,383 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-11 20:24:23,462 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-11 20:24:23,668 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8081"] 
+2022-06-11 20:24:23,690 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8081 (http) with context path '' 
+2022-06-11 20:24:23,691 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-11 20:24:23,706 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-11 20:24:23,740 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-11 20:24:23,862 [main][] INFO  c.a.a.AclApplication Started AclApplication in 4.764 seconds (JVM running for 6.605) 
+2022-06-11 20:24:49,248 [http-nio-8081-exec-2][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-11 20:24:49,248 [http-nio-8081-exec-2][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-11 20:24:49,252 [http-nio-8081-exec-2][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 3 ms 

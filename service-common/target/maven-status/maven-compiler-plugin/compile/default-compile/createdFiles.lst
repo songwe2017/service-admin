@@ -1,0 +1,14 @@
+me\song\common\config\SwaggerConfig.class
+me\song\common\constant\Constant.class
+me\song\common\exception\GlobalException.class
+me\song\common\util\R.class
+me\song\common\exception\GuliException.class
+me\song\common\base\BaseModel.class
+me\song\common\config\MybatisPlusConfig.class
+me\song\common\util\RCode.class
+me\song\common\util\ResponseUtils.class
+me\song\common\util\UUIDUtils.class
+me\song\common\config\MvcConfig.class
+me\song\common\util\BeanUtils.class
+me\song\common\util\JSONUtils.class
+me\song\common\constant\ShiroConstant.class

@@ -1,0 +1,145 @@
+2023-01-06 11:49:55,505 [main][] INFO  m.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 39112 (D:\workspace\wrokspace-spring\guli-parent\service-sys\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2023-01-06 11:49:55,543 [main][] INFO  m.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-01-06 11:49:57,196 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-01-06 11:49:57,200 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-01-06 11:49:57,251 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces. 
+2023-01-06 11:49:58,045 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-01-06 11:49:58,056 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-01-06 11:49:58,057 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-01-06 11:49:58,057 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-01-06 11:49:58,181 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-01-06 11:49:58,181 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2563 ms 
+2023-01-06 11:50:02,307 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-01-06 11:50:02,420 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-01-06 11:50:02,834 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-01-06 11:50:02,835 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-01-06 11:50:02,835 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-01-06 11:50:02,835 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-01-06 11:50:02,835 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-01-06 11:50:02,870 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@747f6c5a, org.springframework.security.web.context.SecurityContextPersistenceFilter@476fde05, org.springframework.security.web.header.HeaderWriterFilter@5d7dd549, org.springframework.web.filter.CorsFilter@66e341e9, org.springframework.security.web.authentication.logout.LogoutFilter@581c9bb7, me.song.security.LoginAuthenticationFilter@5b48f0f4, me.song.security.TokenFilter@546ed2a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7ac48e10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3002e397, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bfc79cb, org.springframework.security.web.session.SessionManagementFilter@6459f4ea, org.springframework.security.web.access.ExceptionTranslationFilter@43d76a92, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@75e80a97] 
+2023-01-06 11:50:02,967 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-01-06 11:50:03,001 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-01-06 11:50:03,003 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-01-06 11:50:03,037 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-01-06 11:50:03,125 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-01-06 11:50:03,169 [main][] INFO  m.s.SYSApplication Started SYSApplication in 8.671 seconds (JVM running for 11.238) 
+2023-01-06 11:53:37,725 [main][] INFO  m.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 15112 (D:\workspace\wrokspace-spring\guli-parent\service-sys\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2023-01-06 11:53:37,728 [main][] INFO  m.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-01-06 11:53:38,987 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-01-06 11:53:38,990 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-01-06 11:53:39,025 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces. 
+2023-01-06 11:53:39,584 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-01-06 11:53:39,593 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-01-06 11:53:39,594 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-01-06 11:53:39,594 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-01-06 11:53:39,716 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-01-06 11:53:39,717 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1936 ms 
+2023-01-06 11:53:43,491 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-01-06 11:53:43,598 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-01-06 11:53:43,880 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-01-06 11:53:43,880 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-01-06 11:53:43,880 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-01-06 11:53:43,880 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-01-06 11:53:43,881 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-01-06 11:53:43,911 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@66e341e9, org.springframework.security.web.context.SecurityContextPersistenceFilter@5111de7c, org.springframework.security.web.header.HeaderWriterFilter@486bd064, org.springframework.web.filter.CorsFilter@5b48f0f4, org.springframework.security.web.authentication.logout.LogoutFilter@138f0661, me.song.security.LoginAuthenticationFilter@546ed2a0, me.song.security.TokenFilter@5bfc79cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52354202, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7da1e005, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27ec8754, org.springframework.security.web.session.SessionManagementFilter@740b9a50, org.springframework.security.web.access.ExceptionTranslationFilter@4a2bf50f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b8853] 
+2023-01-06 11:53:43,965 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-01-06 11:53:43,987 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-01-06 11:53:43,988 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-01-06 11:53:44,006 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-01-06 11:53:44,048 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-01-06 11:53:44,071 [main][] INFO  m.s.SYSApplication Started SYSApplication in 6.771 seconds (JVM running for 10.685) 
+2023-01-06 11:53:50,549 [http-nio-8082-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-01-06 11:53:50,549 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2023-01-06 11:53:50,551 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 2 ms 
+2023-01-06 11:53:50,983 [http-nio-8082-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2023-01-06 11:53:51,431 [http-nio-8082-exec-1][] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception 
+java.lang.NullPointerException: null
+	at me.song.security.LoginUser.getAuthorities(LoginUser.java:45)
+	at me.song.security.LoginUser.getAuthorities(LoginUser.java:19)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.createSuccessAuthentication(AbstractUserDetailsAuthenticationProvider.java:197)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.createSuccessAuthentication(DaoAuthenticationProvider.java:122)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:168)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at me.song.security.LoginAuthenticationFilter.attemptAuthentication(LoginAuthenticationFilter.java:39)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:222)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+2023-01-06 12:36:23,476 [main][] INFO  m.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 29472 (D:\workspace\wrokspace-spring\guli-parent\service-sys\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2023-01-06 12:36:23,480 [main][] INFO  m.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-01-06 12:36:24,971 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-01-06 12:36:24,974 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-01-06 12:36:25,015 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces. 
+2023-01-06 12:36:25,730 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-01-06 12:36:25,741 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-01-06 12:36:25,742 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-01-06 12:36:25,742 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-01-06 12:36:25,855 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-01-06 12:36:25,856 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2290 ms 
+2023-01-06 12:36:29,659 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-01-06 12:36:29,900 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-01-06 12:36:30,339 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-01-06 12:36:30,339 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-01-06 12:36:30,339 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-01-06 12:36:30,340 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-01-06 12:36:30,340 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-01-06 12:36:30,384 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4746fb8c, org.springframework.security.web.context.SecurityContextPersistenceFilter@24e1e90a, org.springframework.security.web.header.HeaderWriterFilter@598e5cb8, org.springframework.web.filter.CorsFilter@3be46d9c, org.springframework.security.web.authentication.logout.LogoutFilter@7e691624, me.song.security.LoginAuthenticationFilter@41d877bb, me.song.security.TokenFilter@39c5a105, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18b3db6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2548fc01, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@492fa72a, org.springframework.security.web.session.SessionManagementFilter@300aa927, org.springframework.security.web.access.ExceptionTranslationFilter@1f4dd016, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@410f53b2] 
+2023-01-06 12:36:30,455 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-01-06 12:36:30,492 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-01-06 12:36:30,493 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-01-06 12:36:30,522 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-01-06 12:36:30,591 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-01-06 12:36:30,623 [main][] INFO  m.s.SYSApplication Started SYSApplication in 7.818 seconds (JVM running for 10.999) 
+2023-01-06 12:36:38,508 [http-nio-8082-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-01-06 12:36:38,508 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2023-01-06 12:36:38,511 [http-nio-8082-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 2 ms 
+2023-01-06 12:36:38,885 [http-nio-8082-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 

@@ -1,0 +1,936 @@
+2022-06-02 19:13:36,630 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 13520 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-02 19:13:36,886 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-06-02 19:13:38,824 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-06-02 19:13:38,837 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-06-02 19:13:38,838 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-02 19:13:38,839 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-02 19:13:38,982 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-02 19:13:38,982 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1981 ms 
+2022-06-02 19:13:40,913 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-02 19:13:41,033 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-02 19:13:41,313 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-06-02 19:13:41,343 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-06-02 19:13:41,343 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-02 19:13:41,363 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-02 19:13:41,413 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-02 19:13:41,643 [main][] INFO  c.a.e.EduApplication Started EduApplication in 5.993 seconds (JVM running for 9.426) 
+2022-06-02 19:15:58,313 [http-nio-8080-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-02 19:15:58,313 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-02 19:15:58,314 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 1 ms 
+2022-06-02 19:20:14,453 [http-nio-8080-exec-2][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2022-06-02 19:20:14,773 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:20:14,804 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:20:14,845 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:20:14,859 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:20:14,860 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:20:14,862 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:25:48,605 [main][] INFO  c.a.e.EduApplication Starting EduApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 35424 (D:\workspace\wrokspace-spring\guli-parent\service\service-edu\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2022-06-02 19:25:48,615 [main][] INFO  c.a.e.EduApplication No active profile set, falling back to default profiles: default 
+2022-06-02 19:25:50,021 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8080 (http) 
+2022-06-02 19:25:50,031 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8080"] 
+2022-06-02 19:25:50,031 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2022-06-02 19:25:50,032 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2022-06-02 19:25:50,117 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2022-06-02 19:25:50,117 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1452 ms 
+2022-06-02 19:25:51,529 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2022-06-02 19:25:51,605 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2022-06-02 19:25:51,790 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8080"] 
+2022-06-02 19:25:51,800 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8080 (http) with context path '' 
+2022-06-02 19:25:51,810 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2022-06-02 19:25:51,820 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2022-06-02 19:25:51,850 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2022-06-02 19:25:52,020 [main][] INFO  c.a.e.EduApplication Started EduApplication in 4.085 seconds (JVM running for 5.624) 
+2022-06-02 19:27:22,571 [http-nio-8080-exec-1][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2022-06-02 19:27:22,571 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Initializing Servlet 'dispatcherServlet' 
+2022-06-02 19:27:22,574 [http-nio-8080-exec-1][] INFO  o.s.w.s.DispatcherServlet Completed initialization in 2 ms 
+2022-06-02 19:27:22,879 [http-nio-8080-exec-1][] INFO  c.a.d.p.DruidDataSource {dataSource-1} inited 
+2022-06-02 19:27:23,068 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:27:23,091 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:27:23,145 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:27:23,149 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:27:23,149 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:27:23,152 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:28:29,920 [http-nio-8080-exec-2][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 66752 
+2022-06-02 19:28:29,925 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:28:29,925 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:28:29,931 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:28:29,932 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:28:29,932 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:28:29,934 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:36:23,404 [http-nio-8080-exec-5][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 473471 
+2022-06-02 19:36:23,436 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:36:23,437 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:36:23,447 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:36:23,447 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:36:23,448 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:36:23,450 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:45:40,460 [http-nio-8080-exec-7][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 557010 
+2022-06-02 19:45:40,467 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:45:40,468 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:45:40,469 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:45:40,470 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:45:40,471 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:45:40,474 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:50:37,074 [http-nio-8080-exec-4][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 296602 
+2022-06-02 19:50:37,081 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:50:37,082 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:50:37,085 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:50:37,086 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:50:37,086 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:50:37,087 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:55:24,414 [http-nio-8080-exec-1][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 287327 
+2022-06-02 19:55:24,420 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:55:24,421 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:55:24,423 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:55:24,424 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:55:24,424 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:55:24,426 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:58:29,253 [http-nio-8080-exec-2][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 184828 
+2022-06-02 19:58:29,260 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:58:29,261 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:58:29,264 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:58:29,264 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:58:29,265 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:58:29,266 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 19:59:19,496 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 19:59:19,496 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 19:59:19,498 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 19:59:19,499 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 19:59:19,500 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 19:59:19,504 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 20:00:07,404 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:00:07,405 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:00:07,406 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:00:07,407 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:00:07,407 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 20:00:07,409 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 20:00:20,259 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:00:20,259 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:00:20,260 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:00:20,261 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:00:20,262 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 20:00:20,264 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 20:05:48,878 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 328615 
+2022-06-02 20:05:48,885 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:05:48,885 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:05:48,887 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:05:48,888 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:05:48,889 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 20:05:48,891 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 20:06:29,232 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:06:29,233 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:06:29,234 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:06:29,235 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:06:29,235 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:06:29,237 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:06:56,021 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:06:56,021 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:06:56,022 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:06:56,023 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:06:56,023 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:06:56,024 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:08:07,499 [http-nio-8080-exec-2][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 71475 
+2022-06-02 20:08:07,506 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:08:07,506 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:08:07,528 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:08:07,530 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:08:07,530 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:08:07,531 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:08:28,911 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:08:28,911 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:08:28,912 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:08:28,913 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:08:28,913 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:08:28,914 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:08:48,613 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:08:48,613 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:08:48,614 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:08:48,615 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:08:48,615 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:08:48,617 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:09:37,442 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:09:37,443 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:09:37,444 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:09:37,445 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:09:37,445 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:09:37,446 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:11:46,307 [http-nio-8080-exec-10][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 128861 
+2022-06-02 20:11:46,325 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:11:46,326 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:11:46,329 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:11:46,329 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:11:46,330 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:11:46,331 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:15:24,541 [http-nio-8080-exec-2][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 218211 
+2022-06-02 20:15:24,548 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:15:24,549 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:15:24,576 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:15:24,577 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:15:24,578 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 20:15:24,579 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 20:19:33,108 [http-nio-8080-exec-5][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 248530 
+2022-06-02 20:19:33,114 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:19:33,116 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:19:33,118 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:19:33,119 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:19:33,119 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 20:19:33,120 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 20:32:39,369 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 786250 
+2022-06-02 20:32:39,376 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 20:32:39,377 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 20:32:39,380 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 20:32:39,381 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 20:32:39,382 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 20:32:39,383 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:44:51,781 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:44:51,782 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 21:44:51,796 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:44:51,797 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:44:51,798 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 10(Long) 
+2022-06-02 21:44:51,799 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:45:19,807 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:45:19,807 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 21:45:19,808 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:45:19,809 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:45:19,810 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 10(Long) 
+2022-06-02 21:45:19,811 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:45:25,026 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:45:25,026 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 21:45:25,027 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:45:25,028 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:45:25,028 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 10(Long) 
+2022-06-02 21:45:25,029 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:45:53,705 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (level = ?) 
+2022-06-02 21:45:53,705 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: 1(String) 
+2022-06-02 21:45:53,706 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:45:53,707 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (level = ?) LIMIT ? 
+2022-06-02 21:45:53,708 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 1(String), 10(Long) 
+2022-06-02 21:45:53,709 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:47:10,217 [http-nio-8080-exec-10][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 76508 
+2022-06-02 21:47:10,223 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:47:10,223 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:47:10,225 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:47:10,226 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:47:10,227 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:47:10,228 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:47:29,716 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:47:29,717 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:47:29,718 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:47:29,719 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:47:29,719 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:47:29,720 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:50:50,846 [http-nio-8080-exec-2][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 201126 
+2022-06-02 21:50:50,852 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:50:50,852 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:50:50,854 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:50:50,855 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:50:50,855 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:50:50,856 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:51:02,542 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:51:02,543 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 21:51:02,544 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:51:02,544 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:51:02,545 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 10(Long) 
+2022-06-02 21:51:02,546 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:52:02,898 [http-nio-8080-exec-5][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 60352 
+2022-06-02 21:52:02,904 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:52:02,904 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:52:02,906 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:52:02,907 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:52:02,907 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:52:02,908 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:52:12,335 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:52:12,336 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 21:52:12,336 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:52:12,337 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:52:12,337 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 10(Long) 
+2022-06-02 21:52:12,338 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:52:30,673 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:52:30,674 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:52:30,675 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:52:30,676 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:52:30,676 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:52:30,677 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:53:00,026 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:53:00,026 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 21:53:00,027 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:53:00,028 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:53:00,028 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 10(Long) 
+2022-06-02 21:53:00,029 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:54:01,962 [http-nio-8080-exec-10][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 61933 
+2022-06-02 21:54:01,968 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:54:01,968 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:54:01,969 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:54:01,970 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:54:01,970 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:54:01,972 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:54:10,820 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:54:10,820 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 21:54:10,821 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:54:10,822 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:54:10,823 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 10(Long) 
+2022-06-02 21:54:10,824 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:54:13,047 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:54:13,047 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:54:13,048 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:54:13,049 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:54:13,049 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:54:13,050 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:54:18,180 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 21:54:18,181 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %李四%(String) 
+2022-06-02 21:54:18,182 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:54:18,182 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 21:54:18,183 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %李四%(String), 10(Long) 
+2022-06-02 21:54:18,184 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 21:54:20,472 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:54:20,472 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:54:20,473 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:54:20,473 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:54:20,474 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:54:20,475 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:54:24,828 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (level = ?) 
+2022-06-02 21:54:24,828 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: 2(String) 
+2022-06-02 21:54:24,829 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:54:24,830 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (level = ?) LIMIT ? 
+2022-06-02 21:54:24,831 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(String), 10(Long) 
+2022-06-02 21:54:24,832 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:54:28,938 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:54:28,939 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:54:28,939 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:54:28,940 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:54:28,940 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 10(Long) 
+2022-06-02 21:54:28,942 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 4 
+2022-06-02 21:55:39,821 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 70880 
+2022-06-02 21:55:39,826 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:55:39,826 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:55:39,827 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:55:39,828 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:55:39,828 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:55:39,829 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:55:45,096 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:55:45,096 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:55:45,097 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:55:45,098 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:55:45,098 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:55:45,099 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:55:48,736 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:55:48,736 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:55:48,737 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:55:48,738 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:55:48,738 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:55:48,739 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:55:50,543 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:55:50,543 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:55:50,544 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:55:50,545 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:55:50,545 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:55:50,546 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:56:03,358 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:56:03,358 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:56:03,359 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:56:03,360 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:56:03,360 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:56:03,361 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:56:15,488 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:56:15,488 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:56:15,489 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:56:15,490 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:56:15,490 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:56:15,491 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:56:40,861 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:56:40,861 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:56:40,862 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:56:40,863 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:56:40,863 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:56:40,864 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:58:01,562 [http-nio-8080-exec-7][] ERROR c.a.c.e.GlobalException Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined" 
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+2022-06-02 21:58:21,148 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 100284 
+2022-06-02 21:58:21,158 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:58:21,158 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:58:21,160 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:58:21,161 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:58:21,162 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:58:21,163 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:58:25,640 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:58:25,640 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:58:25,641 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:58:25,642 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:58:25,642 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:58:25,643 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:58:31,219 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:58:31,219 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:58:31,220 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:58:31,221 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:58:31,221 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:58:31,222 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:58:35,508 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:58:35,509 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:58:35,510 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:58:35,511 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:58:35,511 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:58:35,512 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:59:31,161 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:59:31,161 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:59:31,162 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:59:31,163 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:59:31,163 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:59:31,164 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 21:59:35,511 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 21:59:35,511 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 21:59:35,512 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 21:59:35,513 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 21:59:35,513 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 21:59:35,514 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:00:05,055 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:00:05,056 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:00:05,056 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:00:05,057 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:00:05,057 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:00:05,059 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:00:17,192 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 22:00:17,192 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %张三%(String) 
+2022-06-02 22:00:17,193 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:00:17,194 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 AND (name LIKE ?) LIMIT ? 
+2022-06-02 22:00:17,194 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: %张三%(String), 2(Long) 
+2022-06-02 22:00:17,195 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 1 
+2022-06-02 22:00:19,676 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:00:19,677 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:00:19,678 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:00:19,678 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:00:19,679 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:00:19,680 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:04:38,058 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 258379 
+2022-06-02 22:04:38,065 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:04:38,065 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:04:38,067 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:04:38,068 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:04:38,068 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:04:38,069 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:04:47,603 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:04:47,603 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:04:47,604 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:04:47,605 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:04:47,605 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:04:47,606 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:05:08,840 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:05:08,841 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:05:08,841 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:05:08,842 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:05:08,842 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:05:08,843 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:08:34,764 [http-nio-8080-exec-6][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 205921 
+2022-06-02 22:08:34,770 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:08:34,771 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:08:34,772 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:08:34,773 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:08:34,773 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:08:34,774 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:08:45,754 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:08:45,754 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:08:45,755 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:08:45,756 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:08:45,756 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:08:45,757 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:09:42,516 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:09:42,516 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:09:42,517 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:09:42,517 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:09:42,518 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:09:42,519 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:09:49,875 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:09:49,875 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:09:49,876 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:09:49,877 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:09:49,877 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:09:49,878 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:10:24,241 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:10:24,244 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:10:24,244 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:10:24,245 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:10:24,245 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:10:24,246 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:10:28,289 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:10:28,289 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:10:28,289 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:10:28,290 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:10:28,291 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:10:28,291 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:10:36,015 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:10:36,015 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:10:36,016 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:10:36,017 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:10:36,017 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:10:36,018 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:11:00,102 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:11:00,102 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:11:00,103 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:11:00,104 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:11:00,104 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:11:00,105 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:11:03,071 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:11:03,072 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:11:03,073 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:11:03,074 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:11:03,074 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:11:03,075 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:11:04,951 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:11:04,951 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:11:04,952 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:11:04,953 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:11:04,953 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:11:04,954 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:11:06,140 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:11:06,140 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:11:06,141 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:11:06,141 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:11:06,141 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:11:06,142 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:11:07,679 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:11:07,680 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:11:07,681 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:11:07,681 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:11:07,681 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:11:07,682 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:11:08,789 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:11:08,789 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:11:08,790 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:11:08,790 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:11:08,791 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:11:08,792 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:11:53,484 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:11:53,484 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:11:53,485 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:11:53,486 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:11:53,486 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:11:53,486 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:12:14,495 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:12:14,495 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:12:14,496 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:12:14,497 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:12:14,497 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:12:14,498 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:12:22,343 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:12:22,343 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:12:22,344 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:12:22,345 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:12:22,345 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:12:22,346 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:12:29,701 [http-nio-8080-exec-5][] ERROR c.a.c.e.GlobalException Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined" 
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "undefined"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "undefined"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+2022-06-02 22:13:11,860 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:13:11,860 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:13:11,861 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:13:11,861 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:13:11,862 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:13:11,863 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:13:17,406 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:13:17,407 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:13:17,407 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:13:17,408 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:13:17,408 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:13:17,409 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:13:30,973 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 22:13:30,973 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %王五%(String) 
+2022-06-02 22:13:30,974 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:14:22,998 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 22:14:22,998 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %王五%(String) 
+2022-06-02 22:14:22,999 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:27,289 [http-nio-8080-exec-3][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 64290 
+2022-06-02 22:15:27,295 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:27,295 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:27,297 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:27,298 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:15:27,298 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:15:27,299 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:36,158 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:36,158 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:36,159 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:36,160 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:15:36,160 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:15:36,161 [http-nio-8080-exec-2][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:38,707 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:38,708 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:38,708 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:38,709 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:15:38,710 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:15:38,710 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:40,358 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:40,359 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:40,360 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:40,360 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:15:40,361 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:15:40,362 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:41,531 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:41,531 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:41,532 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:41,533 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:15:41,533 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:15:41,534 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:43,072 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:43,072 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:43,073 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:43,073 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:15:43,074 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:15:43,074 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:51,622 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:51,622 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:51,623 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:51,623 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:15:51,624 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:15:51,625 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:53,686 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:53,686 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:53,687 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:53,688 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:15:53,688 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:15:53,688 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:54,852 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:54,852 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:54,853 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:54,853 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:15:54,853 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:15:54,854 [http-nio-8080-exec-10][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:15:58,505 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:15:58,506 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:15:58,506 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:15:58,508 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:15:58,508 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:15:58,509 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:17:07,655 [http-nio-8080-exec-6][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 69147 
+2022-06-02 22:17:07,662 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:17:07,662 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:17:07,664 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:17:07,664 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:17:07,665 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:17:07,666 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:17:13,131 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:17:13,131 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:17:13,132 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:17:13,133 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:17:13,133 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:17:13,134 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:18:12,072 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 AND (name LIKE ?) 
+2022-06-02 22:18:12,072 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters: %王五%(String) 
+2022-06-02 22:18:12,073 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:19:20,503 [http-nio-8080-exec-8][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 68429 
+2022-06-02 22:19:20,508 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:19:20,509 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:19:20,510 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:19:20,511 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:19:20,511 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:19:20,512 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:19:50,392 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:19:50,393 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:19:50,394 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:19:50,395 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:19:50,395 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:19:50,396 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:19:52,856 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:19:52,857 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:19:52,857 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:19:52,858 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:19:52,858 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:19:52,859 [http-nio-8080-exec-1][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:19:54,381 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:19:54,382 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:19:54,382 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:19:54,383 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:19:54,383 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:19:54,384 [http-nio-8080-exec-3][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:20:06,244 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:20:06,245 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:20:06,245 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:20:06,246 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:20:06,246 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:20:06,247 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:32:26,741 [http-nio-8080-exec-9][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 740493 
+2022-06-02 22:32:26,747 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:32:26,747 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:32:26,749 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:32:26,750 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:32:26,750 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:32:26,751 [http-nio-8080-exec-9][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:32:37,505 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:32:37,505 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:32:37,506 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:32:37,507 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:32:37,507 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:32:37,508 [http-nio-8080-exec-7][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:33:12,493 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:33:12,493 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:33:12,494 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:33:12,495 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:33:12,495 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:33:12,496 [http-nio-8080-exec-8][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:33:17,999 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:33:17,999 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:33:18,000 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:33:18,001 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:33:18,001 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:33:18,002 [http-nio-8080-exec-4][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:34:34,484 [http-nio-8080-exec-3][] ERROR c.a.c.e.GlobalException Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "4}" 
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "4}"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "4}"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted
+2022-06-02 22:37:14,415 [http-nio-8080-exec-6][] WARN  c.a.d.p.DruidAbstractDataSource discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/education?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8, version : 1.2.8, lastPacketReceivedIdleMillis : 236413 
+2022-06-02 22:37:14,420 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:37:14,420 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:37:14,423 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:37:14,424 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ? 
+2022-06-02 22:37:14,424 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long) 
+2022-06-02 22:37:14,425 [http-nio-8080-exec-6][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:37:17,401 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==>  Preparing: SELECT COUNT(*) AS total FROM edu_teacher WHERE is_deleted = 0 
+2022-06-02 22:37:17,401 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount ==> Parameters:  
+2022-06-02 22:37:17,402 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage_mpCount <==      Total: 1 
+2022-06-02 22:37:17,403 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==>  Preparing: SELECT id,name,intro,level,avatar,sort,is_deleted,gmt_create,gmt_modified FROM edu_teacher WHERE is_deleted=0 LIMIT ?,? 
+2022-06-02 22:37:17,403 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage ==> Parameters: 2(Long), 2(Long) 
+2022-06-02 22:37:17,405 [http-nio-8080-exec-5][] DEBUG c.a.e.m.T.selectPage <==      Total: 2 
+2022-06-02 22:37:21,593 [http-nio-8080-exec-9][] ERROR c.a.c.e.GlobalException Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "4}" 
+org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "4}"
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:133)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:170)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:931)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NumberFormatException: For input string: "4}"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:589)
+	at java.lang.Long.valueOf(Long.java:803)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:214)
+	at org.springframework.beans.propertyeditors.CustomNumberEditor.setAsText(CustomNumberEditor.java:115)
+	at org.springframework.beans.TypeConverterDelegate.doConvertTextValue(TypeConverterDelegate.java:429)
+	at org.springframework.beans.TypeConverterDelegate.doConvertValue(TypeConverterDelegate.java:402)
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:155)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:73)
+	at org.springframework.beans.TypeConverterSupport.convertIfNecessary(TypeConverterSupport.java:53)
+	at org.springframework.validation.DataBinder.convertIfNecessary(DataBinder.java:696)
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:125)
+	... 47 common frames omitted

@@ -1,0 +1,75 @@
+2023-02-06 08:48:00,243 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-02-06 08:48:00,973 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-02-06 08:48:02,395 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-02-06 08:48:02,396 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-02-06 08:48:02,406 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-02-06 08:48:02,407 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-02-06 08:48:02,407 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-02-06 08:48:02,592 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54e94de9, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e80d5, org.springframework.security.web.header.HeaderWriterFilter@53e82089, org.springframework.web.filter.CorsFilter@2cff03cf, org.springframework.security.web.authentication.logout.LogoutFilter@7c0b0bd9, me.song.security.LoginAuthenticationFilter@924f3f1, me.song.security.TokenFilter@19e2db7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78861d9e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@670c171c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77a4bac, org.springframework.security.web.session.SessionManagementFilter@4ec27c4c, org.springframework.security.web.access.ExceptionTranslationFilter@c83ed77, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5e9ea380] 
+2023-02-06 08:48:02,970 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-02-06 08:48:02,971 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-02-06 08:48:03,021 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-02-06 08:48:03,225 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-02-06 08:48:03,517 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-02-06 08:48:03,670 [main][] INFO  m.s.SYSApplication Started SYSApplication in 226175.963 seconds (JVM running for 226179.076) 
+2023-02-06 08:48:05,206 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-02-06 08:48:05,208 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
+2023-02-06 15:02:09,319 [main][] INFO  m.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 30836 (D:\workspace\wrokspace-spring\guli-parent\service-sys\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2023-02-06 15:02:09,322 [main][] INFO  m.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-02-06 15:02:10,805 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-02-06 15:02:10,808 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-02-06 15:02:10,843 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces. 
+2023-02-06 15:02:11,209 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@27a97e08' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-02-06 15:02:11,215 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-02-06 15:02:11,488 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-02-06 15:02:11,499 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-02-06 15:02:11,500 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-02-06 15:02:11,500 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-02-06 15:02:11,616 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-02-06 15:02:11,616 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 2212 ms 
+2023-02-06 15:02:15,610 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-02-06 15:02:15,738 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-02-06 15:02:16,125 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-02-06 15:02:16,125 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-02-06 15:02:16,125 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-02-06 15:02:16,125 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-02-06 15:02:16,127 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-02-06 15:02:16,172 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7911cc15, org.springframework.security.web.context.SecurityContextPersistenceFilter@7d484fcd, org.springframework.security.web.header.HeaderWriterFilter@6562cc23, org.springframework.web.filter.CorsFilter@4409cae6, org.springframework.security.web.authentication.logout.LogoutFilter@9b367c8, me.song.security.LoginAuthenticationFilter@14e750c5, me.song.security.TokenFilter@242ff747, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d25e878, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@245cb8df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5329f6b3, org.springframework.security.web.session.SessionManagementFilter@3869a6e5, org.springframework.security.web.access.ExceptionTranslationFilter@3f048c86, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f09e6b2] 
+2023-02-06 15:02:16,252 [main][] INFO  o.a.c.h.Http11NioProtocol Starting ProtocolHandler ["http-nio-8082"] 
+2023-02-06 15:02:16,277 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-02-06 15:02:16,279 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-02-06 15:02:16,297 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-02-06 15:02:16,351 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-02-06 15:02:16,468 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-02-06 15:02:16,535 [main][] INFO  m.s.SYSApplication Started SYSApplication in 8.007 seconds (JVM running for 12.528) 
+2023-02-06 15:29:43,852 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-02-06 15:29:43,855 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
+2023-02-06 15:35:57,288 [main][] INFO  m.s.SYSApplication Starting SYSApplication using Java 1.8.0_102 on LAPTOP-4AHHCIO7 with PID 29312 (D:\workspace\wrokspace-spring\guli-parent\service-sys\target\classes started by Songbing in D:\workspace\wrokspace-spring\guli-parent) 
+2023-02-06 15:35:57,294 [main][] INFO  m.s.SYSApplication No active profile set, falling back to default profiles: default 
+2023-02-06 15:36:01,202 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Multiple Spring Data modules found, entering strict repository configuration mode! 
+2023-02-06 15:36:01,210 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data Redis repositories in DEFAULT mode. 
+2023-02-06 15:36:01,318 [main][] INFO  o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces. 
+2023-02-06 15:36:03,079 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1668919e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-02-06 15:36:03,091 [main][] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying) 
+2023-02-06 15:36:03,756 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat initialized with port(s): 8082 (http) 
+2023-02-06 15:36:03,768 [main][] INFO  o.a.c.h.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8082"] 
+2023-02-06 15:36:03,769 [main][] INFO  o.a.c.c.StandardService Starting service [Tomcat] 
+2023-02-06 15:36:03,769 [main][] INFO  o.a.c.c.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.41] 
+2023-02-06 15:36:03,880 [main][] INFO  o.a.c.c.C.[.[.[/] Initializing Spring embedded WebApplicationContext 
+2023-02-06 15:36:03,880 [main][] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 6488 ms 
+2023-02-06 15:45:31,259 [main][] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)] 
+2023-02-06 15:45:31,458 [main][] INFO  o.s.s.c.ThreadPoolTaskExecutor Initializing ExecutorService 'applicationTaskExecutor' 
+2023-02-06 15:45:32,254 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-ui.html'] with [] 
+2023-02-06 15:45:32,255 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/swagger-resources/**'] with [] 
+2023-02-06 15:45:32,255 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/webjars/**'] with [] 
+2023-02-06 15:45:32,255 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/v2/**'] with [] 
+2023-02-06 15:45:32,256 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure Ant [pattern='/api/**'] with [] 
+2023-02-06 15:45:32,373 [main][] INFO  o.s.s.w.DefaultSecurityFilterChain Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2aafa84f, org.springframework.security.web.context.SecurityContextPersistenceFilter@d180961, org.springframework.security.web.header.HeaderWriterFilter@6f65a203, org.springframework.web.filter.CorsFilter@448892f1, org.springframework.security.web.authentication.logout.LogoutFilter@112530c3, me.song.security.LoginAuthenticationFilter@1626bddf, me.song.security.TokenFilter@29532e91, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d978ab9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77998ea7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7e691624, org.springframework.security.web.session.SessionManagementFilter@4de158ca, org.springframework.security.web.access.ExceptionTranslationFilter@5b59c3d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3dad535f] 
+2023-02-06 15:45:32,565 [main][] INFO  o.s.b.w.e.t.TomcatWebServer Tomcat started on port(s): 8082 (http) with context path '' 
+2023-02-06 15:45:32,568 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed 
+2023-02-06 15:45:32,611 [main][] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s) 
+2023-02-06 15:45:32,703 [main][] INFO  s.d.s.w.s.ApiListingReferenceScanner Scanning for api listing references 
+2023-02-06 15:45:32,822 [main][] WARN  s.d.s.w.r.p.ParameterDataTypeReader Trying to infer dataType java.lang.Long[] 
+2023-02-06 15:45:32,923 [main][] INFO  m.s.SYSApplication Started SYSApplication in 576.396 seconds (JVM running for 581.547) 
+2023-02-06 15:45:34,230 [SpringContextShutdownHook][] INFO  o.s.s.c.ThreadPoolTaskExecutor Shutting down ExecutorService 'applicationTaskExecutor' 
+2023-02-06 15:45:34,240 [SpringContextShutdownHook][] INFO  c.a.d.p.DruidDataSource {dataSource-0} closing ... 
