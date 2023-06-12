@@ -3,7 +3,7 @@ package me.song.sys.system.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import me.song.sys.system.model.User;
-import me.song.sys.system.vo.UserVo;
+import me.song.sys.system.model.vo.UserVo;
 
 /**
  * <p>

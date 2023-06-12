@@ -41,9 +41,6 @@ public class User extends BaseModel {
     @ApiModelProperty("性别1男2女")
     private String gender;
 
-    @ApiModelProperty("是否管理员")
-    private Boolean isAdmin;
-
     @ApiModelProperty("邮箱")
     private String email;
 

@@ -1,4 +1,4 @@
-package me.song.sys.system.vo;
+package me.song.sys.system.model.vo;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

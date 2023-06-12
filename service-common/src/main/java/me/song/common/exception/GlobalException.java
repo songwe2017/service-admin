@@ -14,21 +14,15 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalException {
     
-    @ExceptionHandler(GuliException.class)
-    public R handleGuliException(GuliException e) {
-        log.error(e.getMsg(), e);
-        return R.failed().code(e.getStatus()).msg(e.getMsg());
-    }
-    
     @ExceptionHandler(DuplicateKeyException.class)
     public R handleDuplicateKeyException(DuplicateKeyException e){
         log.error(e.getMessage(), e);
-        return R.failed().msg("数据库已存在该记录!");
+        return R.failed("数据库已存在该记录!");
     }
     
     @ExceptionHandler(Exception.class)
     public R handleException(Exception e) {
         log.error(e.getMessage(), e);
-        return R.failed().msg(e.getMessage());
+        return R.failed(e.getMessage());
     }
 }

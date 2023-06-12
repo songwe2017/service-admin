@@ -2,13 +2,13 @@ package me.song.sys.shiro.realm;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import me.song.sys.shiro.ShiroByteSource;
+import me.song.sys.shiro.utils.ShiroSecurityUtils;
 import me.song.sys.system.model.Menu;
 import me.song.sys.system.model.Role;
 import me.song.sys.system.model.User;
 import me.song.sys.system.service.MenuService;
 import me.song.sys.system.service.RoleService;
 import me.song.sys.system.service.UserService;
-import org.apache.commons.lang3.BooleanUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
@@ -39,24 +39,13 @@ public class UserRealm extends AuthorizingRealm {
     // 授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        String loginUser = (String) principals.getPrimaryPrincipal();
-        LambdaQueryWrapper<User> condition = new LambdaQueryWrapper<User>()
-                .eq(User::getUsername, loginUser);
-        User user = userService.getOne(condition);
+        Long loginUserId = ShiroSecurityUtils.getLoginUserId();
 
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-        if (null != user.getIsAdmin() && user.getIsAdmin()) {
-            List<Role> roles = roleService.list();
-            roles.forEach(role -> info.addRole(role.getRoleCode()));
-            List<Menu> menus = menuService.list();
-            menus.forEach(menu -> info.addStringPermission(menu.getPermission()));
-
-            return info;
-        }
-
-        List<Role> roles = roleService.getUserRoles(user.getId());
+        List<Role> roles = roleService.getUserRoles(loginUserId);
         roles.forEach(role -> info.addRole(role.getRoleCode()));
-        List<Menu> menus = menuService.getUserMenus(user.getId());
+
+        List<Menu> menus = menuService.getUserMenus(loginUserId);
         menus.forEach(menu -> info.addStringPermission(menu.getPermission()));
 
         return info;
@@ -80,7 +69,7 @@ public class UserRealm extends AuthorizingRealm {
         }
 
         return new SimpleAuthenticationInfo(
-                loginUser,
+                user,
                 user.getPassword(),
                 ShiroByteSource.Util.bytes("595f81557f9e403990fecea2d2e177e8"),
                 getName());

@@ -1,17 +1,29 @@
 package me.song.sys.system.controller;
 
-import com.google.common.collect.Maps;
+import me.song.common.constant.ShiroConstant;
 import me.song.common.util.R;
-import me.song.sys.system.vo.UserVo;
+import me.song.sys.shiro.utils.ShiroSecurityUtils;
+import me.song.sys.system.model.Menu;
+import me.song.sys.system.model.Role;
+import me.song.sys.system.model.User;
+import me.song.sys.system.model.vo.UserVo;
+import me.song.sys.system.service.MenuService;
+import me.song.sys.system.service.RoleService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.DefaultParameterNameDiscoverer;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
+import java.lang.reflect.Type;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Songwe
@@ -19,6 +31,11 @@ import java.util.HashMap;
  */
 @RestController
 public class LoginController {
+    @Autowired
+    private RoleService roleService;
+
+    @Autowired
+    private MenuService menuService;
 
     @PostMapping("/login")
     public R login(@RequestBody UserVo userVo) {
@@ -28,24 +45,24 @@ public class LoginController {
             subject.login(token);
         }
         catch (UnknownAccountException e) {
-            return R.failed().msg("用户名错误");
+            return R.failed("用户名错误");
         }
         catch (IncorrectCredentialsException e) {
-            return R.failed().msg("密码错误");
+            return R.failed("密码错误");
         }
         catch (Exception e) {
-            return R.failed().msg("账户验证失败");
+            return R.failed("账户验证失败");
         }
-        return R.success().data("token", subject.getPrincipal());
+        return R.success().put(ShiroConstant.TOKEN, ((User) subject.getPrincipal()).getUsername());
     }
 
     @GetMapping("/getInfo")
     public R getInfo() {
-        String name = (String) SecurityUtils.getSubject().getPrincipal();
-        HashMap<String, Object> map = Maps.newHashMap();
-        map.put("name", name);
-        map.put("avatar", "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif");
-        return R.success(map);
+        User loginUser = ShiroSecurityUtils.getLoginUser();
+        List<Role> roles = roleService.getUserRoles(loginUser.getId());
+
+        List<Menu> menus = menuService.getUserMenus(loginUser.getId());
+        return R.success().put("user", loginUser).put("roles", roles).put("menus", menus);
     }
 
     @GetMapping("/logout")
@@ -54,5 +71,5 @@ public class LoginController {
         subject.logout();
         return R.success();
     }
-    
+
 }

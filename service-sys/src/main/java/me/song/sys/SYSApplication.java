@@ -10,10 +10,12 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 @Slf4j
+@EnableAsync
 @MapperScan(basePackages = "me.song.sys.*.mapper")
-														// 这里关闭 security 功能使它不进入登录界面
+// 这里关闭 security 功能使它不进入登录界面
 @SpringBootApplication(exclude = {SecurityAutoConfiguration.class})
 @ComponentScan(basePackages = {"me.song"}, excludeFilters = {
 //	@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {RedissonConfig.class}),

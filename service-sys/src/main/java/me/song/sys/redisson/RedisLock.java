@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author songwe
- * @date 2019/6/19 下午10:26
+ * @since 2019/6/19 下午10:26
  */
 @Slf4j
 public class RedisLock {
@@ -22,6 +22,7 @@ public class RedisLock {
     /**
      * 加锁操作 （设置锁的有效时间）
      * 如果获取不到锁，线程进入休眠状态直到获取锁
+     *
      * @param lockName 锁名称
      * @param leaseTime  锁有效时间
      */
@@ -32,6 +33,7 @@ public class RedisLock {
 
     /**
      * 加锁操作 (锁有效时间采用默认时间30秒）
+     *
      * @param lockName 锁名称
      */
     public void lock(String lockName) {
@@ -42,6 +44,7 @@ public class RedisLock {
     /**
      * 加锁操作(tryLock锁，没有等待时间）
      * 获取成功则返回true否则返回false
+     *
      * @param lockName  锁名称
      * @param leaseTime 锁有效时间
      */

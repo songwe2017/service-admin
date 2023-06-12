@@ -3,6 +3,7 @@ package me.song.sys.shiro.filter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import me.song.common.constant.ShiroConstant;
+import me.song.sys.system.model.User;
 import org.apache.shiro.session.ExpiredSessionException;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.UnknownSessionException;
@@ -44,10 +45,10 @@ public class KickOutAccessControlFilter extends AccessControlFilter {
         if (!subject.isAuthenticated()) {
             return true;
         }
-        String loginUser = (String) subject.getPrincipal();
+        User currentUser = (User) subject.getPrincipal();
         String sessionId = subject.getSession().getId().toString();
 
-        RDeque<String> deque = redisson.getDeque(ShiroConstant.LOGIN_NUM_CACHE + loginUser);
+        RDeque<String> deque = redisson.getDeque(ShiroConstant.LOGIN_NUM_CACHE + currentUser.getUsername());
         // 判断当前 sessionId 是否存在此用户队列
         boolean contains = deque.contains(sessionId);
         if (!contains) {

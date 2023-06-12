@@ -28,7 +28,6 @@ public class RedisCache<K, V> implements Cache<K, V>, Serializable {
     public RedisCache(String name, RedisTemplate redisTemplate) {
         this.name = name;
         this.redisTemplate = redisTemplate;
-//        this.redisTemplate.setHashValueSerializer(redisTemplate.getDefaultSerializer());
     }
 
     public V get(K key) throws CacheException{

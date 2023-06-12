@@ -1,5 +1,6 @@
 package me.song.sys.mq;
 
+import lombok.extern.slf4j.Slf4j;
 import me.song.sys.AbstractBaseTest;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.ConsumeConcurrentlyStatus;
@@ -16,18 +17,19 @@ import org.junit.jupiter.api.Test;
  * @author Songwe
  * @since 2023/3/27 15:27
  */
+@Slf4j
 public class MQTest extends AbstractBaseTest {
 
     @Test
     public void testPushConsumeMq() throws Exception {
-        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("dw_test_consumer_6");
+        DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("testConsumer");
         consumer.setNamesrvAddr("127.0.0.1:9876");
-        consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
+        consumer.setConsumeFromWhere(ConsumeFromWhere.CONSUME_FROM_TIMESTAMP);
         consumer.subscribe("TOPIC_TEST", "*");
         consumer.setAllocateMessageQueueStrategy(new AllocateMessageQueueAveragelyByCircle());
         consumer.registerMessageListener((MessageListenerConcurrently) (msgs, context) -> {
             try {
-                System.out.printf("%s Receive New Messages: %s", Thread.currentThread().getName(), msgs);
+                log.info("Receive New Messages: {}", msgs);
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
             } catch (Throwable e) {
                 e.printStackTrace();
@@ -75,16 +77,12 @@ public class MQTest extends AbstractBaseTest {
 
     @Test
     public void testSimpleMq() throws Exception {
-        DefaultMQProducer producer = new DefaultMQProducer("testProducerGroup");
+        DefaultMQProducer producer = new DefaultMQProducer("testProducer");
         producer.setNamesrvAddr("127.0.0.1:9876");
         producer.start();
 
-        Message message = new Message("TOPIC_TEST", "hello rocketmq".getBytes());
+        Message message = new Message("TOPIC_TEST", null, "ODS2020072615490003", "{\"id\":3, \"orderNo\":\"ODS2020072615490001\"}".getBytes());
         SendResult result;
-        result  = producer.send(message, 15000);
-        System.out.println(result);
-
-        message = new Message("TOPIC_TEST", null, "ODS2020072615490001", "{\"id\":1, \"orderNo\":\"ODS2020072615490001\",\"buyerId\":1,\"sellerId\":1  }".getBytes());
         result = producer.send(message);
         System.out.println(result);
         producer.shutdown();

@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * @author Songwe
- * @date 2022/5/29 14:40
+ * @since 2022/5/29 14:40
  */
 public class CodeGenerator {
     
@@ -30,7 +30,7 @@ public class CodeGenerator {
     private StrategyConfig.Builder strategyConfig() {
         return new StrategyConfig.Builder()
                 .addTablePrefix("sys_")
-                .addInclude("sys_user") // 设置需要生成的表名
+                .addInclude("sys_menu") // 设置需要生成的表名
                 ;
     }
     /**
@@ -50,7 +50,7 @@ public class CodeGenerator {
     private PackageConfig.Builder packageConfig() {
         return new PackageConfig.Builder()
                 .parent("me.song.sys")
-                .moduleName("system")
+                .moduleName("gen")
                 .entity("model");
     }
 

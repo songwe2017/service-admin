@@ -2,7 +2,9 @@ package me.song.sys.system.controller;
 
 
 import me.song.common.util.R;
+import me.song.sys.shiro.utils.ShiroSecurityUtils;
 import me.song.sys.system.model.Menu;
+import me.song.sys.system.model.vo.RouterVo;
 import me.song.sys.system.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,10 +26,10 @@ public class MenuController {
     @Autowired
     private MenuService menuService;
 
-    @GetMapping("/getAllMenu")
+    @GetMapping("/getAllMenus")
     //@PreAuthorize("isAnonymous()")
-    public R getAllMenu() {
-        List<Menu> menus = menuService.queryAllMenu();
+    public R getAllMenus() {
+        List<Menu> menus = menuService.getAllMenus();
         return R.success(menus);
     }
 
@@ -41,6 +43,14 @@ public class MenuController {
     public R assignPermission(Long roleId, Long[] permissionId) {
         menuService.doAssignMenu(roleId, permissionId);
         return R.success();
+    }
+
+    @GetMapping("/buildRouter")
+    public R buildRouter() {
+        Long userId = ShiroSecurityUtils.getLoginUserId();
+        List<Menu> userMenusTree = menuService.getUserMenusTree(userId);
+        List<RouterVo> routerVos = menuService.buildRouter(userMenusTree);
+        return R.success(routerVos);
     }
 }
 

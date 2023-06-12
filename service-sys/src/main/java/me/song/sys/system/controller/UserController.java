@@ -5,11 +5,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import me.song.common.util.R;
 import me.song.sys.system.model.User;
+import me.song.sys.system.service.MenuService;
 import me.song.sys.system.service.UserService;
-import me.song.sys.system.vo.UserVo;
-import org.apache.shiro.SecurityUtils;
+import me.song.sys.system.model.vo.UserVo;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
-import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,6 +29,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private MenuService menuService;
 
     @GetMapping("/find/{id}")
     public R find(@PathVariable Long id) {
@@ -58,15 +60,14 @@ public class UserController {
         return R.success(page);
     }
 
-    @RequiresPermissions("user:view")
+    @RequiresPermissions("system:user:view")
     @PostMapping("/pageCondition/{current}/{size}")
     public R pageCondition(@PathVariable long current,
                            @PathVariable long size,
-                           // 该注解必须使用post请求，同时如果vo属性都是则报错，所以需要加 require属性
                            @RequestBody(required = false) UserVo userVo) {
 
-        Page<User> teacherPage = userService.pageCondition(Page.of(current, size), userVo);
-        return R.success(teacherPage);
+        Page<User> userPage = userService.pageCondition(Page.of(current, size), userVo);
+        return R.success(userPage);
     }
 
     @PostMapping("/add")

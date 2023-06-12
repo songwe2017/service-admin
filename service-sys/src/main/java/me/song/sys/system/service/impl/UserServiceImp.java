@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import me.song.sys.system.mapper.UserMapper;
 import me.song.sys.system.model.User;
 import me.song.sys.system.service.UserService;
-import me.song.sys.system.vo.UserVo;
+import me.song.sys.system.model.vo.UserVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

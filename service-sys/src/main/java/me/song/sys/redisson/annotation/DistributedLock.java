@@ -3,10 +3,10 @@ package me.song.sys.redisson.annotation;
 import java.lang.annotation.*;
 
 /**
- * @Description: 基于注解的分布式式锁
+ * 基于注解的分布式式锁
  *
  * @author xub
- * @date 2019/6/19 下午9:22
+ * @since 2019/6/19 下午9:22
  */
 @Documented
 @Inherited
